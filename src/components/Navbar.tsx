@@ -45,7 +45,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo / Wordmark */}
           <Link href="/" className="flex items-center gap-1 group focus:outline-none">
-            <span className="text-xl font-bold tracking-wider text-slate-100 transition-colors duration-200 group-hover:text-white">
+            <span className="text-xl font-bold tracking-wider text-slate-100 transition-colors duration-200 group-hover:text-brand-indigo">
               VEDA
             </span>
             <span className="text-xl font-black tracking-wider text-brand-cyan transition-colors duration-200 group-hover:text-brand-indigo">
@@ -65,7 +65,7 @@ export default function Navbar() {
                   className={`text-sm font-medium tracking-wide transition-all duration-200 relative py-1 focus:outline-none ${
                     isActive
                       ? "text-brand-cyan"
-                      : "text-slate-300 hover:text-white"
+                      : "text-slate-300 hover:text-slate-100"
                   }`}
                 >
                   {link.name}
@@ -96,7 +96,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-300 hover:text-white p-1 rounded-md focus:outline-none"
+              className="text-slate-300 hover:text-slate-100 p-1 rounded-md focus:outline-none"
               aria-label="Toggle navigation menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -125,8 +125,8 @@ export default function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className={`block px-3 py-2.5 rounded-lg text-base font-medium transition-colors focus:outline-none ${
                       isActive
-                        ? "bg-slate-900 text-brand-cyan font-semibold border-l-2 border-brand-cyan"
-                        : "text-slate-300 hover:bg-slate-900/60 hover:text-white"
+                        ? "bg-slate-900/60 text-brand-cyan font-semibold border-l-2 border-brand-cyan"
+                        : "text-slate-300 hover:bg-slate-900/10 hover:text-slate-100"
                     }`}
                   >
                     {link.name}
