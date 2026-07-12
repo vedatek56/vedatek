@@ -125,6 +125,13 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vedatek.co.uk; font-src 'self' data:; connect-src 'self';"
+        />
+        <meta name="referrer" content="no-referrer-when-downgrade" />
+      </head>
       <body className="min-h-full flex flex-col bg-brand-dark text-slate-100 selection:bg-brand-indigo/35 selection:text-white">
         <script
           type="application/ld+json"

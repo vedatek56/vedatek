@@ -84,6 +84,8 @@ export const services: Service[] = [
       "API integrations (REST, SOAP, Webhooks)",
       "ERP integrations (Microsoft Dynamics 365 Business Central)",
       "E-commerce & warehouse integrations (Linnworks, Shopify)",
+      "Logistics & courier integrations (Royal Mail, DPD, DHL, FedEx APIs)",
+      "WMS order and shipment synchronization pipelines",
       "Real-time data synchronization pipelines",
       "Middleware and integration architecture"
     ],
@@ -116,8 +118,10 @@ export const services: Service[] = [
       "Purchase order (PO) workflows",
       "Invoice processing and financial automation",
       "Dispatch and fulfillment integrations",
+      "Batch / lot tracking and expiration validation workflows",
       "Supplier and customer EDI onboarding",
-      "Data transformation and schema validation"
+      "Data transformation and schema validation",
+      "MHRA Good Distribution Practice (GDP) compliant workflow validation"
     ],
     technologies: [
       "EDIFACT",
@@ -180,6 +184,8 @@ export const services: Service[] = [
       "Centralized logging aggregates",
       "Performance metrics & SLIs/SLOs definition",
       "Actionable alerting and incident escalation paths",
+      "IoT sensor telemetry logging (e.g. cold chain temperature tracking)",
+      "Real-time critical alert dispatch (Slack, SMS, email integration)",
       "Reliability engineering reviews",
       "Incident response improvements"
     ],
@@ -210,6 +216,8 @@ export const services: Service[] = [
       "Zero-Trust network architecture design",
       "Identity & Access Management (IAM) refinement",
       "Secrets management & encryption pipelines",
+      "GxP (MHRA) computer systems validation (CSV) audits",
+      "Secure warehouse network architecture & industrial endpoint protection",
       "Vulnerability assessment & remediation reviews",
       "Secure-by-design system consulting"
     ],
