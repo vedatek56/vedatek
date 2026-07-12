@@ -3,8 +3,8 @@
 :root {
   --background: #f8fafc; /* slate-50 background */
   --foreground: #0f172a; /* slate-900 primary text */
-  --card-bg: rgba(255, 255, 255, 0.75);
-  --card-border: rgba(99, 102, 241, 0.08);
+  --card-bg: #ffffff;
+  --card-border: #cbd5e1;
 }
 
 @theme {
@@ -76,6 +76,32 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--foreground) !important;
 }
 
+/* Global Card Styling overrides for high contrast defined boundaries */
+.bg-slate-900\/10, 
+.bg-slate-950\/40, 
+.bg-slate-900\/20, 
+.bg-slate-950\/30,
+.glass-card {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important; /* solid slate-300 border for clean outlines */
+  border-width: 1px !important;
+  border-style: solid !important;
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.02) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Hover effects for all cards */
+.bg-slate-900\/10:hover, 
+.bg-slate-950\/40:hover, 
+.bg-slate-900\/20:hover, 
+.bg-slate-950\/30:hover,
+.glass-card:hover {
+  background-color: #ffffff !important;
+  border-color: #4f46e5 !important; /* glow to brand-indigo */
+  box-shadow: 0 12px 24px -10px rgba(79, 70, 229, 0.12), 0 0 15px -2px rgba(79, 70, 229, 0.06) !important;
+  transform: translateY(-2px) !important;
+}
+
 /* Custom premium styling classes for light mode */
 
 .glass-panel {
@@ -83,21 +109,6 @@ h1, h2, h3, h4, h5, h6 {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(99, 102, 241, 0.08);
-}
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(99, 102, 241, 0.08);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.glass-card:hover {
-  background: rgba(255, 255, 255, 0.95);
-  border-color: rgba(99, 102, 241, 0.3);
-  box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.1), 0 0 20px -2px rgba(99, 102, 241, 0.05);
-  transform: translateY(-2px);
 }
 
 .glow-indigo {

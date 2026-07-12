@@ -24,12 +24,12 @@ export default function HeroVisual() {
   ];
 
   return (
-    <div className="w-full relative h-[400px] sm:h-[500px] flex items-center justify-center overflow-hidden bg-slate-950/20 rounded-2xl border border-brand-border/20">
-      {/* Background Grid Pattern */}
-      <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+    <div className="w-full relative h-[400px] sm:h-[500px] flex items-center justify-center overflow-hidden bg-slate-900/40 rounded-2xl border border-brand-border/40 shadow-inner">
+      {/* Background Grid Pattern - Soft light grey lines */}
+      <div className="absolute inset-0 opacity-40 bg-[linear-gradient(to_right,rgba(148,163,184,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.15)_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
       
       {/* Absolute Ambient Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-brand-indigo/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-brand-indigo/5 rounded-full blur-3xl pointer-events-none"></div>
 
       {/* Connectivity SVG */}
       <svg className="w-full h-full max-w-[800px] max-h-[500px] absolute z-10" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,14 +40,14 @@ export default function HeroVisual() {
             {/* Base line */}
             <path
               d={conn.path}
-              className="stroke-slate-800/80"
+              className="stroke-slate-800/40"
               strokeWidth="2"
               fill="none"
             />
             {/* Animated Flow line */}
             <path
               d={conn.path}
-              className="stroke-brand-cyan/40"
+              className="stroke-brand-indigo/30"
               strokeWidth="2"
               fill="none"
               strokeDasharray="6 20"
@@ -69,20 +69,20 @@ export default function HeroVisual() {
                 cy={node.y}
                 r="40"
                 fill="none"
-                stroke={node.color === "text-brand-cyan" ? "rgba(6, 182, 212, 0.2)" : node.color === "text-brand-violet" ? "rgba(139, 92, 246, 0.2)" : "rgba(99, 102, 241, 0.2)"}
+                stroke={node.color === "text-brand-cyan" ? "rgba(6, 182, 212, 0.15)" : node.color === "text-brand-violet" ? "rgba(139, 92, 246, 0.15)" : "rgba(99, 102, 241, 0.15)"}
                 strokeWidth="1"
                 className="animate-pulse"
               />
 
-              {/* Node Glass Background */}
+              {/* Node Light Glass Background */}
               <circle
                 cx={node.x}
                 cy={node.y}
                 r="30"
-                fill="#0b0f19"
-                stroke="rgba(255, 255, 255, 0.08)"
+                fill="#ffffff"
+                stroke="rgba(99, 102, 241, 0.15)"
                 strokeWidth="1.5"
-                className="transition-all duration-300 group-hover:stroke-brand-cyan/50 group-hover:fill-slate-900"
+                className="transition-all duration-300 group-hover:stroke-brand-indigo/60 group-hover:fill-slate-900"
               />
 
               {/* React Icon container using foreignObject */}
@@ -97,12 +97,12 @@ export default function HeroVisual() {
                 </div>
               </foreignObject>
 
-              {/* Node label */}
+              {/* Node label - High contrast slate colors */}
               <text
                 x={node.x}
                 y={node.y + 48}
                 textAnchor="middle"
-                className="fill-slate-400 font-sans text-xs tracking-wider font-semibold pointer-events-none group-hover:fill-slate-200 transition-colors duration-200"
+                className="fill-slate-300 font-sans text-xs tracking-wider font-extrabold pointer-events-none group-hover:fill-slate-100 transition-colors duration-200"
               >
                 {node.label}
               </text>
