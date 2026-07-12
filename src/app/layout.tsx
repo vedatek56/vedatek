@@ -46,11 +46,20 @@ export const metadata: Metadata = {
     siteName: "VEDATEK",
     locale: "en_GB",
     type: "website",
+    images: [
+      {
+        url: "https://vedatek.co.uk/og-image.png",
+        width: 1200,
+        height: 1200,
+        alt: "VEDATEK | UK Technology Consultancy",
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: "VEDATEK | UK Technology Consultancy",
     description: "Solving real business operational challenges through custom software, AI integrations, cloud engineering, and systems automation.",
+    images: ["https://vedatek.co.uk/og-image.png"],
   }
 };
 
@@ -59,12 +68,68 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://vedatek.co.uk/#organization",
+        "name": "VEDATEK",
+        "url": "https://vedatek.co.uk",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://vedatek.co.uk/og-image.png"
+        },
+        "description": "VEDATEK is a modern UK technology consultancy helping businesses solve operational challenges through custom software, AI, cloud automation, and systems integration.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "London",
+          "addressCountry": "GB"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "hello@vedatek.co.uk",
+          "contactType": "customer support"
+        }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://vedatek.co.uk/#service",
+        "name": "VEDATEK Technology Consultancy",
+        "image": "https://vedatek.co.uk/og-image.png",
+        "url": "https://vedatek.co.uk",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "London",
+          "addressCountry": "GB"
+        },
+        "knowsAbout": [
+          "DevOps Engineering",
+          "Site Reliability Engineering (SRE)",
+          "Systems Integration",
+          "Microsoft Dynamics 365 Business Central",
+          "Linnworks",
+          "EDI Automation",
+          "Custom Software Development",
+          "E-Commerce Solutions",
+          "AI Business Tools",
+          "AWS Cloud Infrastructure"
+        ]
+      }
+    ]
+  };
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-brand-dark text-slate-100 selection:bg-brand-indigo/35 selection:text-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Navbar />
         <main className="flex-grow pt-16">
           {children}
