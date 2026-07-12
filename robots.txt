@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vedatek.io/sitemap.xml
+Sitemap: https://vedatek.co.uk/sitemap.xml
