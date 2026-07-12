@@ -87,7 +87,7 @@ export default function Navbar() {
               href="/contact"
               className="group flex items-center gap-2 bg-gradient-to-r from-brand-indigo to-brand-cyan hover:from-brand-indigo/90 hover:to-brand-cyan/90 text-slate-950 text-sm font-semibold py-2.5 px-5 rounded-full shadow-lg shadow-brand-indigo/10 hover:shadow-brand-indigo/25 transition-all duration-300 focus:outline-none"
             >
-              Talk to Us
+              Discuss Your Challenge
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>
@@ -139,7 +139,7 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-brand-indigo to-brand-cyan hover:from-brand-indigo/90 hover:to-brand-cyan/90 text-slate-950 font-semibold py-3 px-4 rounded-xl shadow-md transition-all duration-200 focus:outline-none"
                 >
-                  Talk to Us
+                  Discuss Your Challenge
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

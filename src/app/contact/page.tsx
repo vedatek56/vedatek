@@ -11,8 +11,8 @@ export default function ContactPage() {
       icon: Shield
     },
     {
-      title: "1-Business-Day Response SLA",
-      desc: "We review every incoming challenge within one business day and provide a clear, initial assessment of how we can help.",
+      title: "1-Business-Day Response Aim",
+      desc: "We aim to review every incoming challenge within one business day and provide a clear, initial assessment of how we can help.",
       icon: Clock
     },
     {

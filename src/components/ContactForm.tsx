@@ -311,20 +311,20 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-brand-indigo to-brand-cyan hover:from-brand-indigo/90 hover:to-brand-cyan/90 text-slate-950 font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-brand-indigo/10 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed focus:outline-none"
-            >
-              {status === "submitting" ? (
-                <>
-                  <Loader2 className="w-5 h-5 animate-spin" />
-                  Sending Inquiry...
-                </>
-              ) : (
-                <>
-                  <Send className="w-4 h-4" />
-                  Start a Conversation
-                </>
-              )}
-            </button>
+            className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-brand-indigo to-brand-cyan hover:from-brand-indigo/90 hover:to-brand-cyan/90 text-slate-950 font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-brand-indigo/10 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed focus:outline-none"
+          >
+            {status === "submitting" ? (
+              <>
+                <Loader2 className="w-5 h-5 animate-spin" />
+                Sending Inquiry...
+              </>
+            ) : (
+              <>
+                <Send className="w-4 h-4" />
+                  Discuss Your Challenge
+              </>
+            )}
+          </button>
           </motion.form>
         )}
       </AnimatePresence>

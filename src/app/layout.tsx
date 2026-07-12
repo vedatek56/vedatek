@@ -1,26 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "VEDATEK | UK Technology Consultancy - AI, Software, Cloud & Integrations",
+  title: "VEDATEK | Technology that works for your business",
   description:
-    "VEDATEK helps UK businesses solve real operational challenges. Senior technology expertise in AI, software development, cloud infrastructure, and systems integrations.",
+    "VEDATEK helps UK businesses connect systems, automate work and build reliable technology. Business value first, technical depth second.",
   keywords: [
     "UK technology consultancy",
-    "AI solutions for businesses",
+    "technology that works for your business",
+    "AI and automation",
     "custom software development",
     "systems integration",
     "business process automation",
@@ -40,8 +30,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "VEDATEK | UK Technology Consultancy",
-    description: "Solving real business operational challenges through custom software, AI integrations, cloud engineering, and systems automation.",
+    title: "VEDATEK | Technology that works for your business",
+    description: "Connecting systems, automating work and building reliable technology through AI, software, cloud engineering and integrations.",
     url: "https://vedatek.co.uk",
     siteName: "VEDATEK",
     locale: "en_GB",
@@ -51,14 +41,14 @@ export const metadata: Metadata = {
         url: "https://vedatek.co.uk/og-image.png",
         width: 1200,
         height: 1200,
-        alt: "VEDATEK | UK Technology Consultancy",
+        alt: "VEDATEK | Technology that works for your business",
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "VEDATEK | UK Technology Consultancy",
-    description: "Solving real business operational challenges through custom software, AI integrations, cloud engineering, and systems automation.",
+    title: "VEDATEK | Technology that works for your business",
+    description: "Connecting systems, automating work and building reliable technology through AI, software, cloud engineering and integrations.",
     images: ["https://vedatek.co.uk/og-image.png"],
   }
 };
@@ -80,7 +70,7 @@ export default function RootLayout({
           "@type": "ImageObject",
           "url": "https://vedatek.co.uk/og-image.png"
         },
-        "description": "VEDATEK is a modern UK technology consultancy helping businesses solve operational challenges through custom software, AI, cloud automation, and systems integration.",
+        "description": "VEDATEK is a modern UK technology consultancy helping businesses connect systems, automate work and build reliable technology through custom software, AI, cloud automation and systems integration.",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "London",
@@ -123,11 +113,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className="h-full antialiased"
     >
       <head>
         <meta
-          http-equiv="Content-Security-Policy"
+          httpEquiv="Content-Security-Policy"
           content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vedatek.co.uk; font-src 'self' data:; connect-src 'self' https://api.web3forms.com;"
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />

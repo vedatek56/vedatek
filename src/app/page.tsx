@@ -1,7 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Brain, Code2, Network, RefreshCw, CloudLightning, Activity, ShieldCheck, Compass, ChevronRight } from "lucide-react";
+import {
+  ArrowRight,
+  Brain,
+  Code2,
+  Network,
+  RefreshCw,
+  CloudLightning,
+  Activity,
+  ShieldCheck,
+  Compass,
+  ChevronRight,
+  Users,
+  ShoppingBag,
+  Truck,
+  Building2,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import HeroVisual from "@/components/HeroVisual";
 import IntegrationVisual from "@/components/IntegrationVisual";
@@ -9,7 +24,6 @@ import PartnerMarquee from "@/components/PartnerMarquee";
 import SolutionsConsole from "@/components/SolutionsConsole";
 import { services } from "@/data/services";
 
-// Icon mapper for service icons
 const IconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Brain,
   Code2,
@@ -44,102 +58,173 @@ const itemVariants = {
   }
 } as const;
 
+const outcomeAreas = [
+  {
+    title: "Connect",
+    desc: "Connect applications, systems and data.",
+    color: "text-brand-cyan"
+  },
+  {
+    title: "Automate",
+    desc: "Reduce repetitive manual work and improve business processes.",
+    color: "text-brand-teal"
+  },
+  {
+    title: "Build",
+    desc: "Create software, tools and digital solutions around real business needs.",
+    color: "text-brand-indigo"
+  },
+  {
+    title: "Scale",
+    desc: "Build secure, reliable technology that can grow with the organisation.",
+    color: "text-brand-violet"
+  }
+];
+
+const whoWeHelp = [
+  {
+    title: "E-commerce & Retail",
+    desc: "Connect commerce, ERP, warehouse, fulfilment and customer systems.",
+    icon: ShoppingBag
+  },
+  {
+    title: "Wholesale & Distribution",
+    desc: "Automate orders, EDI, inventory and operational workflows.",
+    icon: Truck
+  },
+  {
+    title: "Growing Businesses",
+    desc: "Replace manual processes and disconnected tools with scalable technology.",
+    icon: Building2
+  },
+  {
+    title: "Technology Teams",
+    desc: "Add senior expertise across cloud, reliability, automation, integration and infrastructure.",
+    icon: Users
+  }
+];
+
+const techEcosystem = [
+  "AWS",
+  "Microsoft Dynamics 365 Business Central",
+  "Linnworks",
+  "Terraform",
+  "Kubernetes",
+  "Docker",
+  "Python",
+  "Node.js",
+  "Grafana",
+  "Prometheus",
+  "Splunk",
+  "AWS CloudWatch"
+];
+
+const practiceStory = [
+  {
+    title: "Challenge",
+    text: "Disconnected business systems can create repetitive manual work, inconsistent data and limited visibility across operations."
+  },
+  {
+    title: "Approach",
+    text: "Design an integration layer that connects ERP, warehouse and trading-partner systems, automates data movement, validates information and provides clear operational visibility."
+  },
+  {
+    title: "Result",
+    text: "Reduce double entry, improve stock and order accuracy, and make it easier for operations teams to act on dependable information."
+  }
+];
+
 export default function Home() {
   const whyUs = [
     {
       title: "Business-first thinking",
-      desc: "We start with the operational or process challenge, not the technology. We won't build software you don't need."
+      desc: "We start with the operational challenge, then shape the technology around it."
     },
     {
       title: "Senior technical expertise",
-      desc: "Your projects are handled by experienced engineers, ensuring complex challenges are solved with solid engineering judgement."
+      desc: "Your project is handled by experienced engineers who make pragmatic decisions."
     },
     {
-      title: "End-to-end capability",
-      desc: "From system architecture and bespoke software development to cloud migrations, automated pipelines, and cybersecurity."
+      title: "Broad capability",
+      desc: "AI, software, integration, cloud, reliability and security under one roof."
     },
     {
       title: "Flexible engagement",
-      desc: "Access high-calibre technical expertise on a flexible, fractional basis without the overheads of a traditional large consultancy."
+      desc: "Access high-calibre expertise without unnecessary overhead."
     },
     {
-      title: "Built for the long term",
-      desc: "We design maintainable, well-documented, secure, and scalable solutions that your business can rely on for years to come."
+      title: "Built to last",
+      desc: "We design maintainable, secure and scalable solutions your team can rely on."
     }
   ];
 
-  const techEcosystem = [
-    "AWS", "Microsoft Azure", "Dynamics 365 Business Central", "Linnworks", 
-    "Terraform", "Kubernetes", "Docker", "Python", "Node.js", 
-    "Grafana", "Prometheus", "Splunk"
-  ];
-
   return (
-    <div className="flex flex-col min-h-screen">
-      
-      {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20 pb-20 md:pt-28 md:pb-28 lg:pt-36 lg:pb-36 bg-slate-950">
-        <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-b from-brand-indigo/10 via-transparent to-transparent pointer-events-none"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-            
-            {/* Copy Column */}
-            <div className="lg:col-span-6 flex flex-col space-y-6 text-left">
+    <div className="flex min-h-screen flex-col">
+      <section className="relative overflow-hidden bg-slate-950 pb-20 pt-20 md:pb-24 md:pt-28 lg:pb-28 lg:pt-36">
+        <div className="pointer-events-none absolute left-0 right-0 top-0 h-[500px] bg-gradient-to-b from-brand-indigo/10 via-transparent to-transparent" />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
+            <div className="flex flex-col space-y-6 text-left lg:col-span-6">
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wider text-brand-cyan bg-brand-cyan/10 border border-brand-cyan/20">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
-                  UK Technology Partner
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-cyan/20 bg-brand-cyan/10 px-3 py-1 text-xs font-semibold tracking-wider text-brand-cyan">
+                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-brand-cyan" />
+                  UK Technology Consultancy
                 </span>
               </motion.div>
-              
+
               <motion.h1
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-none"
+                className="text-4xl font-black leading-none tracking-tight text-white sm:text-5xl lg:text-6xl"
               >
-                Technology that <br className="hidden sm:inline" />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-indigo via-brand-cyan to-brand-teal">
-                  works
-                </span> for your business.
+                Technology that works for your business.
               </motion.h1>
-              
+
               <motion.p
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-slate-400 text-lg leading-relaxed max-w-xl"
+                className="max-w-xl text-lg leading-relaxed text-slate-400"
               >
-                From AI and software to cloud, automation and systems integration, VEDATEK helps businesses solve complex technology challenges and build smarter ways of working.
+                We connect systems, automate manual work and build reliable technology from AI and software to cloud and integrations.
               </motion.p>
-              
+
+              <motion.p
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.25 }}
+                className="max-w-xl text-sm leading-relaxed text-slate-500"
+              >
+                Practical technology solutions built around real business problems.
+              </motion.p>
+
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="flex flex-col sm:flex-row gap-4 pt-4"
+                className="flex flex-col gap-4 pt-4 sm:flex-row"
               >
                 <Link
                   href="/contact"
-                  className="group flex items-center justify-center gap-2 bg-gradient-to-r from-brand-indigo to-brand-cyan hover:from-brand-indigo/90 hover:to-brand-cyan/90 text-slate-950 font-bold py-3.5 px-7 rounded-full shadow-lg shadow-brand-indigo/15 hover:shadow-brand-indigo/25 transition-all duration-300"
+                  className="group flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-indigo to-brand-cyan px-7 py-3.5 font-bold text-slate-950 shadow-lg shadow-brand-indigo/15 transition-all duration-300 hover:from-brand-indigo/90 hover:to-brand-cyan/90 hover:shadow-brand-indigo/25"
                 >
-                  Talk to Us
-                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  Discuss Your Challenge
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
                 <Link
                   href="/services"
-                  className="flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800/80 text-slate-200 border border-slate-800 hover:border-slate-700 font-semibold py-3.5 px-7 rounded-full transition-all duration-200"
+                  className="flex items-center justify-center gap-2 rounded-full border border-slate-800 bg-slate-900 px-7 py-3.5 font-semibold text-slate-200 transition-all duration-200 hover:border-slate-700 hover:bg-slate-800/80"
                 >
                   Explore Our Services
                 </Link>
               </motion.div>
             </div>
 
-            {/* Visual Column */}
             <div className="lg:col-span-6">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -149,44 +234,50 @@ export default function Home() {
                 <HeroVisual />
               </motion.div>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* Technology Partner Marquee */}
-      <PartnerMarquee />
-
-      {/* Problem / Value Section */}
-      <section className="py-24 bg-slate-900/20 border-y border-brand-border/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <span className="text-xs uppercase tracking-widest text-brand-indigo font-bold block mb-2">Our Focus</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
-              Your technology should make business easier.
+      <section className="border-y border-brand-border/30 bg-slate-900/10 py-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto mb-6 max-w-3xl text-center">
+            <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-brand-indigo">
+              Platforms and systems
+            </span>
+            <h2 className="text-2xl font-extrabold tracking-tight text-slate-100 sm:text-3xl">
+              Tools and platforms we work with
             </h2>
-            <p className="text-slate-400 mt-4 leading-relaxed text-base">
-              Businesses often end up with disconnected systems, repetitive manual processes, unreliable integrations, and technology that becomes increasingly difficult to manage. VEDATEK helps simplify this complexity.
+            <p className="mt-3 text-sm leading-relaxed text-slate-400">
+              We work across the systems many growing businesses already use, including cloud, ERP, warehouse and e-commerce platforms.
+            </p>
+          </div>
+          <PartnerMarquee />
+        </div>
+      </section>
+
+      <section className="border-y border-brand-border/30 bg-slate-900/20 py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto mb-16 max-w-3xl text-center">
+            <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-brand-indigo">
+              Your technology should make business easier.
+            </span>
+            <p className="text-base leading-relaxed text-slate-400">
+              Disconnected systems, repetitive manual work and difficult-to-manage technology can slow a business down. VEDATEK simplifies the complexity by connecting systems, automating processes and building technology that works around your business.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: "Connect", desc: "Connect systems, applications, and data feeds securely.", color: "text-brand-cyan" },
-              { title: "Automate", desc: "Remove repetitive manual data entry and processes.", color: "text-brand-teal" },
-              { title: "Build", desc: "Create modern software solutions around your operations.", color: "text-brand-indigo" },
-              { title: "Scale", desc: "Build secure, reliable architecture that grows with your business.", color: "text-brand-violet" }
-            ].map((outcome, idx) => (
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {outcomeAreas.map((outcome, idx) => (
               <div
-                key={idx}
-                className="bg-slate-950/40 border border-brand-border/40 p-6 rounded-2xl flex flex-col justify-between"
+                key={outcome.title}
+                className="flex flex-col justify-between rounded-2xl border border-brand-border/40 bg-slate-950/40 p-6"
               >
                 <div className="space-y-4">
-                  <div className="w-10 h-10 rounded-xl bg-slate-900 border border-brand-border/60 flex items-center justify-center font-black text-sm text-slate-300">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-brand-border/60 bg-slate-900 text-sm font-black text-slate-300">
                     0{idx + 1}
                   </div>
                   <h3 className={`text-lg font-bold tracking-wide ${outcome.color}`}>{outcome.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">{outcome.desc}</p>
+                  <p className="text-sm leading-relaxed text-slate-400">{outcome.desc}</p>
                 </div>
               </div>
             ))}
@@ -194,25 +285,79 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-24 bg-slate-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
+      <section className="border-y border-brand-border/30 bg-slate-950 py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-16 max-w-3xl text-left">
+            <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-brand-cyan">
+              Who we help
+            </span>
+            <h2 className="text-3xl font-extrabold tracking-tight text-slate-100 sm:text-4xl">
+              Teams that need technology to connect, automate, scale or simply work better.
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-slate-400">
+              We work with organisations that need practical improvements across business operations and technology delivery.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {whoWeHelp.map((item) => {
+              const ItemIcon = item.icon;
+              return (
+                <div
+                  key={item.title}
+                  className="glass-card flex flex-col justify-between rounded-2xl p-6"
+                >
+                  <div className="space-y-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-brand-border/60 bg-slate-950 text-brand-cyan">
+                      <ItemIcon className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-lg font-bold tracking-tight text-slate-100">{item.title}</h3>
+                    <p className="text-sm leading-relaxed text-slate-400">{item.desc}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-brand-border/30 bg-slate-900/10 py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 max-w-4xl text-left">
+            <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-brand-cyan">
+              Example Solution Architecture
+            </span>
+            <h2 className="text-3xl font-extrabold tracking-tight text-slate-100 sm:text-4xl">
+              Connected commerce and operations
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-slate-400">
+              One example of how we connect complex business systems. The same engineering approach can be applied across platforms, industries and technology environments.
+            </p>
+          </div>
+          <IntegrationVisual />
+        </div>
+      </section>
+
+      <section className="bg-slate-950 py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-16 flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div className="max-w-xl text-left">
-              <span className="text-xs uppercase tracking-widest text-brand-cyan font-bold block mb-2">Core Capabilities</span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
+              <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-brand-cyan">
+                Core capabilities
+              </span>
+              <h2 className="text-3xl font-extrabold tracking-tight text-slate-100 sm:text-4xl">
                 Our Services
               </h2>
-              <p className="text-slate-400 mt-2 leading-relaxed text-sm">
-                Practical, production-grade systems design and software engineering. We address concrete bottlenecks to drive technical resilience and operational efficiency.
+              <p className="mt-3 text-sm leading-relaxed text-slate-400">
+                Practical, production-grade systems design and software engineering focused on real business outcomes.
               </p>
             </div>
             <Link
               href="/services"
-              className="mt-4 md:mt-0 flex items-center gap-1 text-sm font-semibold text-brand-cyan hover:text-brand-indigo transition-colors"
+              className="mt-4 flex items-center gap-1 text-sm font-semibold text-brand-cyan transition-colors hover:text-brand-indigo md:mt-0"
             >
               View detailed services
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="h-4 w-4" />
             </Link>
           </div>
 
@@ -221,7 +366,7 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
           >
             {services.slice(0, 6).map((service) => {
               const ServiceIcon = IconMap[service.iconName] || Brain;
@@ -229,21 +374,21 @@ export default function Home() {
                 <motion.div
                   key={service.slug}
                   variants={itemVariants}
-                  className="glass-card rounded-2xl p-6 flex flex-col justify-between"
+                  className="glass-card flex flex-col justify-between rounded-2xl p-6"
                 >
                   <div className="space-y-4">
-                    <div className="w-12 h-12 rounded-xl bg-slate-950 border border-brand-border/60 flex items-center justify-center text-brand-cyan">
-                      <ServiceIcon className="w-6 h-6" />
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-brand-border/60 bg-slate-950 text-brand-cyan">
+                      <ServiceIcon className="h-6 w-6" />
                     </div>
-                    <h3 className="text-lg font-bold text-slate-100 tracking-tight">{service.title}</h3>
-                    <p className="text-slate-400 text-sm leading-relaxed line-clamp-3">{service.shortDescription}</p>
+                    <h3 className="text-lg font-bold tracking-tight text-slate-100">{service.title}</h3>
+                    <p className="line-clamp-3 text-sm leading-relaxed text-slate-400">{service.shortDescription}</p>
                   </div>
-                  <div className="pt-6 mt-6 border-t border-brand-border/30">
+                  <div className="mt-6 border-t border-brand-border/30 pt-6">
                     <Link
                       href={`/services/${service.slug}`}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-wider text-brand-cyan hover:text-white uppercase transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-brand-cyan transition-colors hover:text-white"
                     >
-                      Learn More <ArrowRight className="w-3.5 h-3.5" />
+                      Learn more <ArrowRight className="h-3.5 w-3.5" />
                     </Link>
                   </div>
                 </motion.div>
@@ -253,99 +398,125 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Integration Visual Section */}
-      <section className="py-24 bg-slate-900/10 border-y border-brand-border/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <IntegrationVisual />
-        </div>
-      </section>
-
-      {/* Solutions / Business Problems Section */}
-      <section className="py-24 bg-slate-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <span className="text-xs uppercase tracking-widest text-brand-indigo font-bold block mb-2">Real Use Cases</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
+      <section className="border-y border-brand-border/30 bg-slate-900/10 py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-16 max-w-3xl text-center">
+            <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-brand-indigo">
+              Experience in Practice
+            </span>
+            <h2 className="text-3xl font-extrabold tracking-tight text-slate-100 sm:text-4xl">
               Technology solutions built around real business problems.
             </h2>
-            <p className="text-slate-400 mt-4 leading-relaxed text-sm">
-              We focus on solving the common issues that limit productivity and cost money. We don&apos;t build complex, unmanageable code—we engineer clean pathways for growth.
+            <p className="mt-4 text-sm leading-relaxed text-slate-400">
+              We focus on the issues that slow work down and create risk. The examples below show how the same engineering approach can be adapted to different businesses.
             </p>
           </div>
 
           <SolutionsConsole />
+
+          <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
+            {practiceStory.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-brand-border/40 bg-slate-950/40 p-6"
+              >
+                <span className="mb-3 block text-xs font-bold uppercase tracking-widest text-brand-cyan">
+                  {item.title}
+                </span>
+                <p className="text-sm leading-relaxed text-slate-400">{item.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Why VEDATEK Section */}
-      <section className="py-24 bg-slate-900/20 border-y border-brand-border/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
-            
-            {/* Header Column */}
-            <div className="lg:col-span-5 text-left space-y-4">
-              <span className="text-xs uppercase tracking-widest text-brand-cyan font-bold block">Differentiators</span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
-                Senior expertise. <br />
-                Practical solutions.
+      <section className="border-y border-brand-border/30 bg-slate-900/20 py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-8">
+            <div className="space-y-4 text-left lg:col-span-5">
+              <span className="block text-xs font-bold uppercase tracking-widest text-brand-cyan">
+                Why organisations work with us
+              </span>
+              <h2 className="text-3xl font-extrabold tracking-tight text-slate-100 sm:text-4xl">
+                Senior expertise. Practical solutions.
               </h2>
-              <p className="text-slate-400 leading-relaxed text-sm max-w-md">
-                We believe in providing the technical excellence of a top-tier systems engineering team without the bureaucratic bloat, account management overheads, and generic advice of a large consultancy.
+              <p className="max-w-md text-sm leading-relaxed text-slate-400">
+                We combine the technical depth of a strong engineering team with a commercial, business-first approach.
               </p>
               <div className="pt-4">
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-cyan hover:underline"
-                >
+                <Link href="/about" className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-cyan hover:underline">
                   Read our background story
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>
 
-            {/* List Column */}
-            <div className="lg:col-span-7 flex flex-col gap-6">
+            <div className="flex flex-col gap-6 lg:col-span-7">
               {whyUs.map((item, idx) => (
                 <div
-                  key={idx}
-                  className="flex gap-4 p-5 bg-slate-950/40 border border-brand-border/40 rounded-xl"
+                  key={item.title}
+                  className="flex gap-4 rounded-xl border border-brand-border/40 bg-slate-950/40 p-5"
                 >
-                  <span className="text-xs font-bold text-brand-cyan bg-brand-cyan/10 border border-brand-cyan/20 w-6 h-6 rounded-full flex items-center justify-center shrink-0">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-brand-cyan/20 bg-brand-cyan/10 text-xs font-bold text-brand-cyan">
                     {idx + 1}
                   </span>
                   <div className="text-left">
-                    <h4 className="text-sm font-bold text-slate-200 tracking-wide uppercase mb-1">{item.title}</h4>
-                    <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+                    <h4 className="mb-1 text-sm font-bold uppercase tracking-wide text-slate-200">{item.title}</h4>
+                    <p className="text-sm leading-relaxed text-slate-400">{item.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* Experience / Credibility Section */}
-      <section className="py-24 bg-slate-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
-          <div className="max-w-3xl mx-auto space-y-4">
-            <span className="text-xs uppercase tracking-widest text-brand-indigo font-bold block">Capabilities In Action</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
+      <section className="bg-slate-950 py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-12">
+          <div className="mx-auto max-w-3xl space-y-4">
+            <span className="block text-xs font-bold uppercase tracking-widest text-brand-indigo">
+              Engineering background
+            </span>
+            <h2 className="text-3xl font-extrabold tracking-tight text-slate-100 sm:text-4xl">
               Built on real-world engineering experience.
             </h2>
-            <p className="text-slate-400 leading-relaxed text-sm">
-              The expertise behind VEDATEK spans enterprise systems, cloud engineering, site reliability, software development, systems integration, and cybersecurity. We have engineered platforms that process high transaction volumes, migrate massive databases, and monitor mission-critical systems.
+            <p className="text-sm leading-relaxed text-slate-400">
+              The expertise behind VEDATEK spans more than 15 years across enterprise technology, cloud engineering, site reliability, observability, software development, systems integration, automation, security and infrastructure.
             </p>
           </div>
 
-          {/* Technology Ecosystem display */}
           <div className="space-y-4">
-            <span className="text-xs uppercase tracking-widest text-slate-500 font-bold block">Ecosystem Expertise</span>
-            <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+            <span className="block text-xs font-bold uppercase tracking-widest text-slate-500">
+              Capability areas
+            </span>
+            <div className="mx-auto flex max-w-5xl flex-wrap justify-center gap-3">
+              {[
+                "Enterprise Technology",
+                "Cloud Engineering",
+                "Software & Integration",
+                "Reliability & Observability",
+                "Automation",
+                "Security & Infrastructure"
+              ].map((area) => (
+                <span
+                  key={area}
+                  className="cursor-default rounded-md border border-slate-800 bg-slate-900 px-3.5 py-1.5 font-mono text-xs text-slate-300 transition-colors hover:border-slate-700 hover:text-slate-100"
+                >
+                  {area}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <span className="block text-xs font-bold uppercase tracking-widest text-slate-500">
+              Technology names
+            </span>
+            <div className="mx-auto flex max-w-5xl flex-wrap justify-center gap-3">
               {techEcosystem.map((tech) => (
                 <span
                   key={tech}
-                  className="bg-slate-900 border border-slate-800 text-slate-300 font-mono text-xs px-3.5 py-1.5 rounded-md hover:border-slate-700 hover:text-slate-100 transition-colors cursor-default"
+                  className="cursor-default rounded-md border border-slate-800 bg-slate-900 px-3.5 py-1.5 font-mono text-xs text-slate-300 transition-colors hover:border-slate-700 hover:text-slate-100"
                 >
                   {tech}
                 </span>
@@ -355,33 +526,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-950 via-slate-900/40 to-slate-950 border-t border-brand-border/30 text-center">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-100 tracking-tight">
-            Ready to solve your technology challenge?
+      <section className="border-t border-brand-border/30 bg-gradient-to-b from-slate-950 via-slate-900/40 to-slate-950 py-20 text-center">
+        <div className="mx-auto max-w-3xl space-y-6 px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-black tracking-tight text-slate-100 sm:text-4xl">
+            Ready to discuss a business or technology problem?
           </h2>
-          <p className="text-slate-400 leading-relaxed max-w-md mx-auto text-sm">
-            Connect with us to schedule an introductory call with a senior engineer. No sales reps, just practical solutions.
+          <p className="mx-auto max-w-md text-sm leading-relaxed text-slate-400">
+            Tell us what is slowing your business down. We will help you map the best next step.
           </p>
-          <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col justify-center gap-4 pt-4 sm:flex-row">
             <Link
               href="/contact"
-              className="group flex items-center justify-center gap-2 bg-gradient-to-r from-brand-indigo to-brand-cyan hover:from-brand-indigo/90 hover:to-brand-cyan/90 text-slate-950 font-bold py-3.5 px-8 rounded-full shadow-lg"
+              className="group flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-indigo to-brand-cyan px-8 py-3.5 font-bold text-slate-950 shadow-lg transition-all duration-300 hover:from-brand-indigo/90 hover:to-brand-cyan/90"
             >
-              Start a Conversation
-              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              Discuss Your Challenge
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
             <Link
-              href="/about"
-              className="flex items-center justify-center bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-200 font-semibold py-3.5 px-8 rounded-full transition-colors"
+              href="/services"
+              className="flex items-center justify-center rounded-full border border-slate-800 bg-slate-900 px-8 py-3.5 font-semibold text-slate-200 transition-colors hover:border-slate-700 hover:bg-slate-800"
             >
-              About the Company
+              Explore Our Services
             </Link>
           </div>
         </div>
       </section>
-
     </div>
   );
 }

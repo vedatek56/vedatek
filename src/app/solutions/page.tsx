@@ -154,14 +154,14 @@ export default function SolutionsPage() {
         <div className="mt-20 bg-slate-900/40 border border-brand-border/60 rounded-3xl p-8 sm:p-12 text-center max-w-3xl mx-auto space-y-6">
           <h3 className="text-2xl font-bold text-slate-100">Don&apos;t see your specific challenge here?</h3>
           <p className="text-slate-400 text-sm leading-relaxed max-w-md mx-auto">
-            Operational bottlenecks can be unique. We provide a complimentary consulting session with a senior engineer to map your current architecture and identify gaps.
+            Operational bottlenecks can be unique. We can have an introductory conversation with an experienced engineer to map your current architecture and identify gaps.
           </p>
           <div>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-indigo to-brand-cyan hover:from-brand-indigo/90 hover:to-brand-cyan/90 text-slate-950 font-bold py-3.5 px-6 rounded-full text-sm shadow-md"
             >
-              Consult an Engineer
+              Discuss Your Challenge
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

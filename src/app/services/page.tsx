@@ -126,16 +126,16 @@ export default function ServicesPage() {
 
         {/* CTA Banner */}
         <div className="mt-24 bg-gradient-to-r from-brand-indigo/10 to-brand-cyan/10 border border-brand-border/60 rounded-3xl p-8 sm:p-12 text-center max-w-4xl mx-auto space-y-6">
-          <h3 className="text-2xl font-bold text-slate-100">Need specific custom integrations or support?</h3>
+          <h3 className="text-2xl font-bold text-slate-100">Need help with a specific systems challenge?</h3>
           <p className="text-slate-400 text-sm max-w-lg mx-auto leading-relaxed">
-            Our capabilities are highly adaptable. If you are struggling with a unique systems bottleneck, custom platform, or niche EDI requirement, a senior engineer can help map out a path.
+            Our capabilities are highly adaptable. If you are dealing with a unique systems bottleneck, custom platform or niche EDI requirement, we can help map out a path.
           </p>
           <div className="pt-2">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-indigo to-brand-cyan hover:from-brand-indigo/90 hover:to-brand-cyan/90 text-slate-950 font-bold py-3 px-6 rounded-full text-sm shadow-md"
             >
-              Consult an Engineer
+              Discuss Your Challenge
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

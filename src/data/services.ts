@@ -110,7 +110,7 @@ export const services: Service[] = [
   {
     slug: "edi-automation",
     title: "EDI & Business Process Automation",
-    shortDescription: "Automate order processing, invoicing, and fulfillment flows with suppliers and customers.",
+    shortDescription: "Automate order processing, invoicing and fulfilment flows with suppliers and trading partners.",
     fullDescription: "Make B2B transactions seamless. We implement automated electronic data interchange (EDI) and business workflows to automatically ingest orders, validate data, dispatch fulfillment commands, and transmit invoices without human intervention.",
     iconName: "RefreshCw",
     capabilities: [
@@ -177,7 +177,7 @@ export const services: Service[] = [
     slug: "reliability-observability",
     title: "Site Reliability & Observability",
     shortDescription: "Understand system health, improve uptime, and reduce operational risk.",
-    fullDescription: "Stop guessing what is happening in your production systems. We set up comprehensive monitoring, centralized logging, and actionable alerting to give you complete visibility into system performance and detect issues before they impact customers.",
+    fullDescription: "Stop guessing what is happening in your production systems. We set up monitoring, centralized logging and actionable alerting to give you visibility into system performance and detect issues early.",
     iconName: "Activity",
     capabilities: [
       "Monitoring & observability dashboard design",
@@ -202,7 +202,7 @@ export const services: Service[] = [
       "Identify performance bottlenecks before they cause downtime",
       "Reduce Mean Time to Resolution (MTTR) during system incidents",
       "Understand user patterns and database loads with detailed metrics",
-      "Receive notifications on anomalies before customers report them"
+      "Receive notifications on anomalies before the issue spreads"
     ]
   },
   {
@@ -232,7 +232,7 @@ export const services: Service[] = [
     ],
     businessBenefits: [
       "Protect sensitive customer and business data from unauthorized access",
-      "Meet strict security requirements for enterprise client bids",
+      "Meet strict security requirements for complex client due diligence",
       "Minimize the impact of credentials leaks using rotated secrets",
       "Ensure compliance with cybersecurity insurance and regulatory frameworks"
     ]

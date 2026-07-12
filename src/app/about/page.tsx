@@ -12,12 +12,12 @@ export default function AboutPage() {
     },
     {
       title: "Senior Engineering Standard",
-      desc: "Our consultants have spent years building production-grade software, scale pipelines, and ERP ledger systems. We write clean, maintainable, and thoroughly documented code.",
+      desc: "Our consultants have built production-grade software, scalable pipelines and ERP integrations. We write clean, maintainable and thoroughly documented code.",
       icon: Star
     },
     {
       title: "Security by Default",
-      desc: "Whether we are connecting systems or moving database backups, we implement enterprise-grade encryption, rotated secrets management, and secure VPC architectures.",
+      desc: "Whether we are connecting systems or moving database backups, we implement strong encryption, rotated secrets management and secure network architectures.",
       icon: ShieldCheck
     }
   ];
@@ -69,11 +69,11 @@ export default function AboutPage() {
           </div>
 
           <p>
-            We don&apos;t look like a multinational corporation with hundreds of staff. VEDATEK is a focused technology consultancy. The people behind the business have genuine, senior-level experience delivering complex systems integrations, cloud automation, and software engineering for enterprise environments.
+            VEDATEK is a focused technology consultancy rather than a large generalist agency. The people behind the business have senior-level experience delivering complex systems integrations, cloud automation and software engineering for demanding production environments.
           </p>
 
           <p className="text-slate-200 font-medium text-base">
-            &ldquo;Senior technology expertise without the complexity and overhead of a large consultancy.&rdquo;
+            &ldquo;Senior technology expertise delivered with a practical, focused approach.&rdquo;
           </p>
         </div>
 
@@ -104,14 +104,14 @@ export default function AboutPage() {
         {/* Closing Contact CTA */}
         <div className="mt-20 border-t border-brand-border/40 pt-12 flex flex-col sm:flex-row justify-between items-center gap-6">
           <div className="space-y-1">
-            <h3 className="text-lg font-bold text-slate-100">Ready to consult an engineer?</h3>
+            <h3 className="text-lg font-bold text-slate-100">Ready to discuss a business challenge?</h3>
             <p className="text-slate-400 text-xs">Let&apos;s map out a solution to your business systems challenge.</p>
           </div>
           <Link
             href="/contact"
             className="group flex items-center gap-2 bg-gradient-to-r from-brand-indigo to-brand-cyan hover:from-brand-indigo/90 hover:to-brand-cyan/90 text-slate-950 font-bold py-3 px-6 rounded-full text-xs uppercase tracking-wider"
           >
-            Start a Conversation
+            Discuss Your Challenge
             <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>

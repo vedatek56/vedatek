@@ -17,19 +17,19 @@ interface ConsoleTab {
 }
 
 export default function SolutionsConsole() {
-  const [activeTabId, setActiveTabId] = useState("disconnected-systems");
+  const [activeTabId, setActiveTabId] = useState("connected-commerce");
 
   const tabs: ConsoleTab[] = [
     {
-      id: "disconnected-systems",
-      problem: "Systems don't talk to each other?",
-      solution: "Connect ERP, E-Commerce & Logistics Middleware",
-      details: "When your Shopify sales channel, Linnworks warehouse manager, and Dynamics 365 Business Central financial systems run in silos, inventory discrepancy and delivery bottlenecks are inevitable. We connect these APIs to automate real-time synchronizations.",
+      id: "connected-commerce",
+      problem: "Disconnected systems creating manual work?",
+      solution: "Connect commerce, ERP and fulfilment workflows",
+      details: "When storefronts, warehouse tools and finance systems run in silos, teams end up rekeying data and chasing mismatches. We connect the systems so orders, stock and status updates move automatically.",
       icon: Layers,
       benefits: [
-        "Real-time stock level synchronization across all sales platforms",
-        "Auto-sync orders, cancellations, and status updates instantly",
-        "Eradicate double-entry of invoicing and finance data"
+        "Keep stock and order data aligned across systems",
+        "Reduce double entry and manual reconciliation",
+        "Improve visibility across commerce and operations"
       ],
       ctaLink: "/services/systems-integration",
       diagram: (
@@ -58,14 +58,14 @@ export default function SolutionsConsole() {
     },
     {
       id: "manual-data-entry",
-      problem: "Too much manual workflow entry?",
-      solution: "Hands-Free B2B & Retail Order Automation",
-      details: "Staff shouldn't manually process EDI files, purchase orders, or transform supplier schemas. We build background EDI pipelines that capture order payloads via secure AS2 or SFTP, validate data, and trigger fulfillment commands instantly.",
+      problem: "Too much manual order processing?",
+      solution: "Automate purchase orders, invoices and fulfilment updates",
+      details: "Teams should not be copying order data or reformatting supplier files by hand. We build background automation that captures payloads, validates them and routes the work to the right systems.",
       icon: RefreshCw,
       benefits: [
-        "Process massive retail purchase orders in seconds",
-        "Zero manual validation slips or fulfillment errors",
-        "Automatic financial transformed data pushes directly into accounting"
+        "Reduce repetitive processing work",
+        "Cut avoidable validation and transcription errors",
+        "Keep operational teams focused on higher-value tasks"
       ],
       ctaLink: "/services/edi-automation",
       diagram: (
@@ -87,14 +87,14 @@ export default function SolutionsConsole() {
     },
     {
       id: "ai-adoption",
-      problem: "Unsure where to use AI securely?",
-      solution: "Pragmatic & Secure Internal AI Assistants",
-      details: "Bypass generic prompts that leak sensitive client data. We construct closed, secure, and private AI integrations. We build internal knowledge bases that query documents dynamically and parse supplier PDF quotes automatically within your network sandbox.",
+      problem: "Want to use AI without exposing sensitive data?",
+      solution: "Build secure internal assistants and document tools",
+      details: "AI is most useful when it solves a real bottleneck inside a secure environment. We build private tools that search documents, extract information and support internal teams without pushing data into public workflows.",
       icon: BrainCircuit,
       benefits: [
-        "Ingest supplier invoice and pricing documents instantly",
-        "Deploy private RAG tools that keep your intellectual property safe",
-        "Intelligent customer ticket classifications & drafting support"
+        "Search internal knowledge securely",
+        "Extract structured data from documents faster",
+        "Support teams with practical AI workflows"
       ],
       ctaLink: "/services/ai-automation",
       diagram: (
@@ -115,14 +115,14 @@ export default function SolutionsConsole() {
     },
     {
       id: "unmanaged-tech",
-      problem: "Infrastructure hard to scale?",
-      solution: "Modern Infrastructure as Code & Observability",
-      details: "Fragile environments cause critical outages during peak times. We construct stable infrastructure using Terraform (IaC) and monitor server health in real time using Prometheus/Grafana alerts, preventing system failure before users experience it.",
+      problem: "Technology hard to scale or observe?",
+      solution: "Stabilise cloud infrastructure and monitoring",
+      details: "As systems grow, they can become fragile and difficult to understand. We use Infrastructure as Code and observability tooling to make deployments repeatable and system health visible.",
       icon: Activity,
       benefits: [
-        "Consistent configurations from development to live production",
-        "Actionable slack alerts based on server telemetry logs",
-        "Eliminate cloud cost waste through automated scaling rules"
+        "Keep environments consistent from development to production",
+        "Spot issues earlier with clear metrics and alerts",
+        "Reduce infrastructure waste through better automation"
       ],
       ctaLink: "/services/cloud-devops",
       diagram: (
@@ -143,14 +143,14 @@ export default function SolutionsConsole() {
     },
     {
       id: "non-existent-software",
-      problem: "Need custom tools built for your flow?",
-      solution: "Bespoke Dashboards & Integration Middleware",
-      details: "If off-the-shelf software forces you to change your operations, it's not the right tool. We engineer custom dashboard portals and background integration middleware designed specifically around your warehouse, sales, or regulatory workflows.",
+      problem: "Need a tool that fits how you work?",
+      solution: "Build software and dashboards around real operations",
+      details: "If off-the-shelf software forces you to change your process, it is not the right fit. We build lightweight tools and integration middleware around the way your business actually operates.",
       icon: Wrench,
       benefits: [
-        "Lightweight, high-performance portal interfaces",
-        "Own 100% of your software with no per-user monthly licensing",
-        "Replace complex spreadsheet workflows with secure databases"
+        "Replace spreadsheet workarounds with proper tools",
+        "Build around existing workflows instead of forcing change",
+        "Own your software and data model"
       ],
       ctaLink: "/services/software-development",
       diagram: (
@@ -258,7 +258,7 @@ export default function SolutionsConsole() {
                   href={activeTab.ctaLink}
                   className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-cyan hover:text-brand-indigo transition-colors"
                 >
-                  Consult an Engineer
+                  Discuss Your Challenge
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>

@@ -48,7 +48,7 @@ export default function Footer() {
               <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
             </Link>
             <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
-              Senior technology expertise without the complexity and overhead of a large consultancy. We help UK businesses solve operational problems through software, integration, and practical AI.
+              Senior technology expertise delivered with a practical, business-first approach. We help UK businesses solve operational problems through software, integration, and practical AI.
             </p>
             {/* Brand Origin explanation */}
             <div className="pt-2">
