@@ -50,6 +50,22 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Global Heading Overrides to Enforce Dynamic Light/Dark Contrast */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--foreground) !important;
+}
+
+/* Global Hover overrides to prevent hardcoded white text contrast issues */
+.hover\:text-white:hover {
+  color: var(--foreground) !important;
+}
+.group:hover .group-hover\:text-white {
+  color: var(--foreground) !important;
+}
+.hover\:border-white:hover {
+  border-color: var(--foreground) !important;
+}
+
 /* Custom premium styling classes for light mode */
 
 .glass-panel {
