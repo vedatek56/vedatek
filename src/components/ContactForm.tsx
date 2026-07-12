@@ -75,16 +75,29 @@ export default function ContactForm() {
     setStatus("submitting");
 
     try {
-      // Simulate API network latency (1.5s)
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
-      // In a real application, you would connect this to your backend handler or serverless function:
-      // const res = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData)
-      // });
-      // if (!res.ok) throw new Error("Server error");
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          access_key: "4c203520-e95e-4ca1-90cd-61bbcbbf1f45",
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.project,
+          subject: `New VEDATEK Lead from ${formData.name} (${formData.company})`,
+          from_name: "VEDATEK Contact Form"
+        })
+      });
+
+      const data = await response.json();
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || "Failed to submit form");
+      }
       
       setStatus("success");
       // Reset form
@@ -99,7 +112,8 @@ export default function ContactForm() {
     } catch (err) {
       console.error("Form submission error:", err);
       setStatus("error");
-      setErrorMessage("Something went wrong while sending your inquiry. Please try again or email us directly at hello@vedatek.co.uk.");
+      const msg = err instanceof Error ? err.message : "Something went wrong while sending your inquiry. Please try again or email us directly at hello@vedatek.co.uk.";
+      setErrorMessage(msg);
     }
   };
 
