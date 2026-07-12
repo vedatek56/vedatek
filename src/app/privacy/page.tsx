@@ -1,5 +1,41 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Shield } from "lucide-react";
+import { pageSeo } from "@/data/seo";
+
+export const metadata: Metadata = {
+  title: pageSeo.privacy.title,
+  description: pageSeo.privacy.description,
+  alternates: {
+    canonical: pageSeo.privacy.canonical,
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+  openGraph: {
+    title: pageSeo.privacy.title,
+    description: pageSeo.privacy.description,
+    url: `https://vedatek.co.uk${pageSeo.privacy.canonical}`,
+    siteName: "VEDATEK",
+    locale: "en_GB",
+    type: "article",
+    images: [
+      {
+        url: "https://vedatek.co.uk/og-image.png",
+        width: 1200,
+        height: 1200,
+        alt: "VEDATEK | Privacy Policy",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageSeo.privacy.title,
+    description: pageSeo.privacy.description,
+    images: ["https://vedatek.co.uk/og-image.png"],
+  },
+};
 
 export default function PrivacyPage() {
   const lastUpdated = "July 2026";

@@ -1,5 +1,41 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, FileText } from "lucide-react";
+import { pageSeo } from "@/data/seo";
+
+export const metadata: Metadata = {
+  title: pageSeo.terms.title,
+  description: pageSeo.terms.description,
+  alternates: {
+    canonical: pageSeo.terms.canonical,
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+  openGraph: {
+    title: pageSeo.terms.title,
+    description: pageSeo.terms.description,
+    url: `https://vedatek.co.uk${pageSeo.terms.canonical}`,
+    siteName: "VEDATEK",
+    locale: "en_GB",
+    type: "article",
+    images: [
+      {
+        url: "https://vedatek.co.uk/og-image.png",
+        width: 1200,
+        height: 1200,
+        alt: "VEDATEK | Terms of Service",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageSeo.terms.title,
+    description: pageSeo.terms.description,
+    images: ["https://vedatek.co.uk/og-image.png"],
+  },
+};
 
 export default function TermsPage() {
   const lastUpdated = "July 2026";

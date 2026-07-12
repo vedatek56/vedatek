@@ -1,7 +1,41 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Star, ShieldCheck, Cpu } from "lucide-react";
+import { pageSeo } from "@/data/seo";
+
+export const metadata: Metadata = {
+  title: pageSeo.about.title,
+  description: pageSeo.about.description,
+  alternates: {
+    canonical: pageSeo.about.canonical,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: pageSeo.about.title,
+    description: pageSeo.about.description,
+    url: `https://vedatek.co.uk${pageSeo.about.canonical}`,
+    siteName: "VEDATEK",
+    locale: "en_GB",
+    type: "website",
+    images: [
+      {
+        url: "https://vedatek.co.uk/og-image.png",
+        width: 1200,
+        height: 1200,
+        alt: "VEDATEK | About VEDATEK",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageSeo.about.title,
+    description: pageSeo.about.description,
+    images: ["https://vedatek.co.uk/og-image.png"],
+  },
+};
 
 export default function AboutPage() {
   const values = [

@@ -1,7 +1,41 @@
-"use client";
-
+import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import { Mail, Clock, Shield } from "lucide-react";
+import { pageSeo } from "@/data/seo";
+
+export const metadata: Metadata = {
+  title: pageSeo.contact.title,
+  description: pageSeo.contact.description,
+  alternates: {
+    canonical: pageSeo.contact.canonical,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: pageSeo.contact.title,
+    description: pageSeo.contact.description,
+    url: `https://vedatek.co.uk${pageSeo.contact.canonical}`,
+    siteName: "VEDATEK",
+    locale: "en_GB",
+    type: "website",
+    images: [
+      {
+        url: "https://vedatek.co.uk/og-image.png",
+        width: 1200,
+        height: 1200,
+        alt: "VEDATEK | Contact",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageSeo.contact.title,
+    description: pageSeo.contact.description,
+    images: ["https://vedatek.co.uk/og-image.png"],
+  },
+};
 
 export default function ContactPage() {
   const highlights = [
