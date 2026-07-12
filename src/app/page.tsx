@@ -83,22 +83,22 @@ const outcomeAreas = [
 
 const whoWeHelp = [
   {
-    title: "E-commerce & Retail",
+    title: "E-COMMERCE & RETAIL",
     desc: "Connect commerce, ERP, warehouse, fulfilment and customer systems.",
     icon: ShoppingBag
   },
   {
-    title: "Wholesale & Distribution",
+    title: "WHOLESALE & DISTRIBUTION",
     desc: "Automate orders, EDI, inventory and operational workflows.",
     icon: Truck
   },
   {
-    title: "Growing Businesses",
+    title: "GROWING BUSINESSES",
     desc: "Replace manual processes and disconnected tools with scalable technology.",
     icon: Building2
   },
   {
-    title: "Technology Teams",
+    title: "TECHNOLOGY TEAMS",
     desc: "Add senior expertise across cloud, reliability, automation, integration and infrastructure.",
     icon: Users
   }
@@ -119,20 +119,33 @@ const techEcosystem = [
   "AWS CloudWatch"
 ];
 
-const practiceStory = [
-  {
-    title: "Challenge",
-    text: "Disconnected business systems can create repetitive manual work, inconsistent data and limited visibility across operations."
-  },
-  {
-    title: "Approach",
-    text: "Design an integration layer that connects ERP, warehouse and trading-partner systems, automates data movement, validates information and provides clear operational visibility."
-  },
-  {
-    title: "Result",
-    text: "Reduce double entry, improve stock and order accuracy, and make it easier for operations teams to act on dependable information."
-  }
-];
+const practiceExample = {
+  title: "Connecting ERP, warehouse and EDI workflows",
+  phases: [
+    {
+      label: "Challenge",
+      text: "Disconnected business systems can create repetitive manual work, inconsistent data and limited visibility across operations."
+    },
+    {
+      label: "Approach",
+      text: "Design an integration layer that connects ERP, warehouse and trading-partner systems, automates data movement, validates information and provides clear operational visibility."
+    },
+    {
+      label: "Outcome",
+      text: "Fewer manual touchpoints, more consistent data flows and a technology foundation that is easier to operate and extend."
+    }
+  ],
+  technologies: [
+    "Microsoft Dynamics 365 Business Central",
+    "Linnworks",
+    "EDI",
+    "APIs",
+    "SFTP",
+    "XML",
+    "JSON",
+    "Cloud services"
+  ]
+};
 
 export default function Home() {
   const whyUs = [
@@ -398,11 +411,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-brand-border/30 bg-slate-900/10 py-24">
+      <section className="border-y border-brand-border/30 bg-slate-950 py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-16 max-w-3xl text-center">
+          <div className="mx-auto mb-16 max-w-3xl text-center">
             <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-brand-indigo">
-              Experience in Practice
+              Real Use Cases
             </span>
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-100 sm:text-4xl">
               Technology solutions built around real business problems.
@@ -413,19 +426,66 @@ export default function Home() {
           </div>
 
           <SolutionsConsole />
+        </div>
+      </section>
 
-          <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
-            {practiceStory.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl border border-brand-border/40 bg-slate-950/40 p-6"
-              >
-                <span className="mb-3 block text-xs font-bold uppercase tracking-widest text-brand-cyan">
-                  {item.title}
-                </span>
-                <p className="text-sm leading-relaxed text-slate-400">{item.text}</p>
+      <section className="border-y border-brand-border/30 bg-slate-900/10 py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-16 max-w-3xl text-center">
+            <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-brand-indigo">
+              Experience in Practice
+            </span>
+            <h2 className="text-3xl font-extrabold tracking-tight text-slate-100 sm:text-4xl">
+              A practical example of connected operations.
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-slate-400">
+              This is an anonymised capability example, not a customer case study. It shows how the same engineering approach can be adapted across businesses and environments.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
+            <div className="glass-card rounded-2xl p-6 sm:p-8 lg:col-span-8">
+              <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-brand-cyan">
+                Example Challenge
+              </span>
+              <h3 className="text-2xl font-bold tracking-tight text-slate-100">
+                {practiceExample.title}
+              </h3>
+              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+                {practiceExample.phases.map((phase) => (
+                  <div
+                    key={phase.label}
+                    className="rounded-xl border border-brand-border/40 bg-slate-950/40 p-4"
+                  >
+                    <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-brand-indigo">
+                      {phase.label}
+                    </span>
+                    <p className="text-sm leading-relaxed text-slate-400">
+                      {phase.text}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            <div className="rounded-2xl border border-brand-border/40 bg-slate-950/40 p-6 sm:p-8 lg:col-span-4">
+              <span className="mb-3 block text-xs font-bold uppercase tracking-widest text-brand-cyan">
+                Technologies
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {practiceExample.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="cursor-default rounded-md border border-slate-800 bg-slate-900 px-3 py-1.5 font-mono text-[11px] text-slate-300 transition-colors hover:border-slate-700 hover:text-slate-100"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-6 text-sm leading-relaxed text-slate-400">
+                The result is fewer manual touchpoints, more consistent data flows and a technology foundation that is easier to operate and extend.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -481,7 +541,7 @@ export default function Home() {
               Built on real-world engineering experience.
             </h2>
             <p className="text-sm leading-relaxed text-slate-400">
-              The expertise behind VEDATEK spans more than 15 years across enterprise technology, cloud engineering, site reliability, observability, software development, systems integration, automation, security and infrastructure.
+              The expertise behind VEDATEK spans more than 15 years across enterprise technology, cloud engineering, site reliability, observability, software development, systems integration, automation, security and infrastructure. Our experience includes engineering platforms that process high transaction volumes, supporting large-scale data migrations and monitoring business-critical systems.
             </p>
           </div>
 
@@ -529,17 +589,17 @@ export default function Home() {
       <section className="border-t border-brand-border/30 bg-gradient-to-b from-slate-950 via-slate-900/40 to-slate-950 py-20 text-center">
         <div className="mx-auto max-w-3xl space-y-6 px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-black tracking-tight text-slate-100 sm:text-4xl">
-            Ready to discuss a business or technology problem?
+            Let&apos;s solve your technology challenge.
           </h2>
           <p className="mx-auto max-w-md text-sm leading-relaxed text-slate-400">
-            Tell us what is slowing your business down. We will help you map the best next step.
+            Tell us what you&apos;re trying to improve, automate, build or connect. You&apos;ll speak directly with someone who understands the technology.
           </p>
           <div className="flex flex-col justify-center gap-4 pt-4 sm:flex-row">
             <Link
               href="/contact"
               className="group flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-indigo to-brand-cyan px-8 py-3.5 font-bold text-slate-950 shadow-lg transition-all duration-300 hover:from-brand-indigo/90 hover:to-brand-cyan/90"
             >
-              Discuss Your Challenge
+              Start a Conversation
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
             <Link

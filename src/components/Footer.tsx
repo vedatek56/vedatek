@@ -7,7 +7,7 @@ export default function Footer() {
   // Mock contact details, easily configurable
   const contactDetails = {
     email: "hello@vedatek.co.uk",
-    location: "London, United Kingdom",
+    location: "United Kingdom",
   };
 
   const serviceLinks = [
@@ -109,7 +109,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
           <p className="text-slate-500">
-            &copy; {currentYear} VEDATEK. All rights reserved. Registered in the UK.
+            &copy; {currentYear} VEDATEK. All rights reserved.
           </p>
           <div className="flex gap-6">
             {legalLinks.map((link) => (

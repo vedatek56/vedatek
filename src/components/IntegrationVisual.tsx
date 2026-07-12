@@ -104,7 +104,7 @@ export default function IntegrationVisual() {
       {/* Explanatory Panel */}
       <div className="lg:col-span-6 flex flex-col space-y-6 justify-center">
         <div>
-          <span className="text-xs uppercase tracking-widest text-brand-cyan font-bold block mb-1">Example Solution Architecture</span>
+          <span className="text-xs uppercase tracking-widest text-brand-cyan font-bold block mb-1">Example: Connected Commerce &amp; Operations</span>
           <h3 className="text-2xl font-bold text-slate-100 tracking-tight">Connected commerce and operations</h3>
           <p className="text-sm text-slate-400 mt-2 leading-relaxed">
             One example of how VEDATEK connects complex business systems. The same engineering approach can be adapted across platforms, industries and technology environments.
