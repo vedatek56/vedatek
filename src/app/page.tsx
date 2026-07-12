@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Brain, Code2, Network, RefreshCw, CloudLightning, Activity, ShieldCheck, Compass, CheckCircle2, ChevronRight } from "lucide-react";
+import { ArrowRight, Brain, Code2, Network, RefreshCw, CloudLightning, Activity, ShieldCheck, Compass, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import HeroVisual from "@/components/HeroVisual";
 import IntegrationVisual from "@/components/IntegrationVisual";
+import PartnerMarquee from "@/components/PartnerMarquee";
+import SolutionsConsole from "@/components/SolutionsConsole";
 import { services } from "@/data/services";
-import { solutions } from "@/data/solutions";
 
 // Icon mapper for service icons
 const IconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -153,6 +154,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Technology Partner Marquee */}
+      <PartnerMarquee />
+
       {/* Problem / Value Section */}
       <section className="py-24 bg-slate-900/20 border-y border-brand-border/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -269,37 +273,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {solutions.map((item) => (
-              <div
-                key={item.id}
-                className="bg-slate-900/20 border border-brand-border/50 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:border-brand-indigo/40"
-              >
-                <div className="space-y-4 text-left">
-                  <h3 className="text-base font-bold text-brand-cyan uppercase tracking-wide">{item.problem}</h3>
-                  <h4 className="text-lg font-bold text-slate-200">{item.solution}</h4>
-                  <p className="text-slate-400 text-sm leading-relaxed">{item.details}</p>
-                  
-                  <ul className="space-y-2 pt-2 text-xs text-slate-300">
-                    {item.benefits.map((benefit, bIdx) => (
-                      <li key={bIdx} className="flex gap-2 items-start">
-                        <CheckCircle2 className="w-4 h-4 text-brand-teal shrink-0 mt-0.5" />
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="pt-6 mt-6 border-t border-brand-border/20">
-                  <Link
-                    href={item.ctaLink}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-wider text-brand-indigo hover:text-white uppercase transition-colors"
-                  >
-                    Explore capability <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
+          <SolutionsConsole />
         </div>
       </section>
 
