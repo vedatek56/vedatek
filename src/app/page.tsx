@@ -23,6 +23,7 @@ import IntegrationVisual from "@/components/IntegrationVisual";
 import PartnerMarquee from "@/components/PartnerMarquee";
 import SolutionsConsole from "@/components/SolutionsConsole";
 import { services } from "@/data/services";
+import { homepageFaqs } from "@/data/seo";
 
 const IconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Brain,
@@ -118,6 +119,19 @@ const techEcosystem = [
   "Splunk",
   "AWS CloudWatch"
 ];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": homepageFaqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
 
 const practiceExample = {
   title: "Connecting ERP, warehouse and EDI workflows",
@@ -582,6 +596,38 @@ export default function Home() {
                 </span>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-brand-border/30 bg-slate-900/10 py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+          <div className="mx-auto mb-16 max-w-3xl text-center">
+            <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-brand-indigo">
+              Frequently Asked Questions
+            </span>
+            <h2 className="text-3xl font-extrabold tracking-tight text-slate-100 sm:text-4xl">
+              Quick answers about how we work.
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-slate-400">
+              A few common questions from people comparing options for systems, software and automation work.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {homepageFaqs.map((faq) => (
+              <div
+                key={faq.question}
+                className="rounded-2xl border border-brand-border/40 bg-slate-950/40 p-6 text-left"
+              >
+                <h3 className="text-base font-bold text-slate-100">{faq.question}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-400">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
