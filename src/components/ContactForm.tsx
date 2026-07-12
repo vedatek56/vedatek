@@ -85,6 +85,7 @@ export default function ContactForm() {
           access_key: "4c203520-e95e-4ca1-90cd-61bbcbbf1f45",
           name: formData.name,
           email: formData.email,
+          replyto: formData.email,
           company: formData.company,
           phone: formData.phone,
           service: formData.service,
