@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { Brain, Code2, Network, RefreshCw, CloudLightning, Activity, ShieldCheck, Compass, ArrowLeft, CheckCircle2, ChevronRight, MessageSquare } from "lucide-react";
 import { services } from "@/data/services";
 
@@ -20,6 +21,43 @@ export function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }> | { slug: string };
+}): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { slug } = resolvedParams;
+  const service = services.find((s) => s.slug === slug);
+
+  if (!service) {
+    return {
+      title: "Service Not Found | VEDATEK",
+    };
+  }
+
+  return {
+    title: `${service.title} | VEDATEK - UK Technology Consultancy`,
+    description: service.shortDescription,
+    alternates: {
+      canonical: `/services/${service.slug}`,
+    },
+    openGraph: {
+      title: `${service.title} | VEDATEK`,
+      description: service.shortDescription,
+      url: `https://vedatek.co.uk/services/${service.slug}`,
+      images: [
+        {
+          url: "https://vedatek.co.uk/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: `${service.title} - VEDATEK`,
+        },
+      ],
+    },
+  };
+}
+
 export default async function ServiceDetailPage({
   params,
 }: {
@@ -35,8 +73,36 @@ export default async function ServiceDetailPage({
 
   const ServiceIcon = IconMap[service.iconName] || Brain;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": service.title,
+    "description": service.shortDescription,
+    "provider": {
+      "@type": "Organization",
+      "name": "VEDATEK",
+      "url": "https://vedatek.co.uk"
+    },
+    "areaServed": "GB",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": service.title,
+      "itemListElement": service.capabilities.map((cap) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": cap
+        }
+      }))
+    }
+  };
+
   return (
     <div className="bg-slate-950 min-h-screen py-16 sm:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Background Gradients */}
       <div className="absolute top-0 left-0 right-0 h-[350px] bg-gradient-to-b from-brand-indigo/5 via-transparent to-transparent pointer-events-none"></div>
 
