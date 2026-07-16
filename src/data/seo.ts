@@ -6,60 +6,70 @@ export const site = {
 
 export const pageSeo = {
   about: {
-    title: "About VEDATEK | UK Technology Consultancy",
+    title: "About VEDATEK | UK Technology Consultancy Specialists",
     description:
-      "Learn how VEDATEK combines business understanding with practical technology expertise across software, integrations, AI, cloud, reliability and security.",
+      "VEDATEK is a UK technology consultancy with 15+ years of engineering experience across systems integration, EDI, Business Central, Linnworks, cloud, DevOps, AI automation and software development.",
     canonical: "/about",
   },
   services: {
-    title: "Services | VEDATEK Technology Consultancy",
+    title: "Technology Services | Systems Integration, EDI, Cloud & AI | VEDATEK",
     description:
-      "Explore VEDATEK services for AI and automation, software development, systems integration, EDI, cloud DevOps, observability and cybersecurity.",
+      "VEDATEK delivers systems integration, EDI automation, Business Central and Linnworks integration, AI automation, custom software, cloud DevOps and site reliability engineering for UK businesses.",
     canonical: "/services",
   },
   solutions: {
-    title: "Solutions | VEDATEK",
+    title: "Business Technology Solutions | E-Commerce, Wholesale & Distribution | VEDATEK",
     description:
-      "See how VEDATEK helps businesses connect systems, automate work and solve operational technology challenges with practical solutions.",
+      "Practical technology solutions for e-commerce, wholesale and distribution businesses. Connect ERP, warehouse, EDI and e-commerce platforms. Eliminate manual work. Build reliable operations.",
     canonical: "/solutions",
   },
   contact: {
-    title: "Contact VEDATEK | Discuss Your Challenge",
+    title: "Contact VEDATEK | Linnworks, EDI & Business Central Integration Consultants",
     description:
-      "Contact VEDATEK to discuss a systems, software, automation, cloud or security challenge with a technology consultant.",
+      "Discuss your systems integration, EDI automation, Business Central, Linnworks, cloud or AI automation challenge with a VEDATEK technology consultant. Free initial conversation.",
     canonical: "/contact",
   },
   privacy: {
-    title: "Privacy Policy | VEDATEK",
-    description: "Read the VEDATEK privacy policy.",
+    title: "Privacy Policy | VEDATEK Technology Consultancy",
+    description: "Privacy policy for VEDATEK, a UK technology consultancy providing systems integration, EDI automation and cloud engineering services.",
     canonical: "/privacy",
   },
   terms: {
-    title: "Terms of Service | VEDATEK",
-    description: "Read the VEDATEK terms of service.",
+    title: "Terms of Service | VEDATEK Technology Consultancy",
+    description: "Terms of service for VEDATEK, a UK technology consultancy providing systems integration, EDI automation and cloud engineering services.",
     canonical: "/terms",
   },
 } as const;
 
 export const homepageFaqs = [
   {
-    question: "What kind of businesses do you help?",
+    question: "What kind of businesses do you work with?",
     answer:
-      "We work with e-commerce, wholesale, growing businesses and technology teams that need systems to connect, automate or work better.",
+      "We primarily work with UK e-commerce retailers, wholesale distributors and technology teams. Our most common engagements involve connecting ERP systems like Microsoft Dynamics 365 Business Central with warehouse platforms like Linnworks, setting up EDI trading with retail customers, automating business workflows, and building cloud infrastructure on AWS.",
+  },
+  {
+    question: "Can you help integrate Linnworks with Business Central?",
+    answer:
+      "Yes. Linnworks and Business Central integration is one of our most common engagements. We design and build middleware that synchronises orders, stock levels, invoices and fulfilment data between the two platforms in real time, eliminating manual data entry and ensuring both systems remain consistent.",
+  },
+  {
+    question: "Do you provide EDI integration services?",
+    answer:
+      "Yes. We implement EDI solutions for wholesale and distribution businesses that need to trade electronically with retail customers such as major supermarkets, pharmacy chains and online marketplaces. We handle EDIFACT, ANSI X12, AS2 and SFTP-based EDI and integrate directly with Business Central, Linnworks and other ERP and WMS platforms.",
+  },
+  {
+    question: "What is your engagement model?",
+    answer:
+      "We offer flexible engagement models depending on the scope of work. Fixed-price assessments and audits are available for businesses that want to understand their options before committing. Project-based delivery is used for defined integration, automation or software builds. Ongoing retainer arrangements work well for businesses that need continued technical support across cloud, reliability and systems work.",
   },
   {
     question: "Do you only do integrations?",
     answer:
-      "No. Integrations are one part of what we do. We also build software, automation, cloud, reliability and security solutions.",
+      "No. Systems integration is one of our core strengths, but we also build custom software and internal tools, implement AI and workflow automation, design cloud infrastructure on AWS using Terraform and Kubernetes, set up monitoring and observability platforms using Grafana and Prometheus, and provide security and infrastructure consulting.",
   },
   {
-    question: "Can you help with Business Central or Linnworks?",
+    question: "How quickly can you start?",
     answer:
-      "Yes. Those platforms are part of the wider systems landscape we often connect and improve.",
-  },
-  {
-    question: "How do we start?",
-    answer:
-      "Share the challenge and we will help map the most practical next step, whether that is integration, automation, software or infrastructure work.",
+      "For most projects we can begin an initial technical conversation within a week and move to scoping within two weeks. Fixed-price assessments such as a Technology Health Check or Integration Architecture Review can typically be delivered within two to three weeks of engagement.",
   },
 ] as const;

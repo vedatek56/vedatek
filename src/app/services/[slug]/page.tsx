@@ -36,15 +36,24 @@ export async function generateMetadata({
     };
   }
 
+  const descriptionMap: Record<string, string> = {
+    "systems-integration": `Linnworks integration, Business Central integration and Shopify ERP connectors for UK e-commerce and wholesale businesses. ${service.shortDescription}`,
+    "edi-automation": `EDI consultant UK — EDIFACT, ANSI X12, AS2 and SFTP EDI integration with Business Central and Linnworks. ${service.shortDescription}`,
+    "cloud-devops": `AWS DevOps and cloud infrastructure consultant UK. Terraform, Kubernetes, CI/CD pipelines and platform engineering. ${service.shortDescription}`,
+    "reliability-observability": `SRE consultant UK — Grafana, Prometheus, Loki and OpenTelemetry observability and monitoring. ${service.shortDescription}`,
+    "ai-automation": `AI automation consultant UK — custom AI workflows, document processing and intelligent automation for UK businesses. ${service.shortDescription}`,
+  };
+
   return {
     title: `${service.title} | VEDATEK - UK Technology Consultancy`,
-    description: service.shortDescription,
+    description: descriptionMap[service.slug] ?? service.shortDescription,
     alternates: {
       canonical: `/services/${service.slug}`,
     },
+    robots: { index: true, follow: true },
     openGraph: {
       title: `${service.title} | VEDATEK`,
-      description: service.shortDescription,
+      description: descriptionMap[service.slug] ?? service.shortDescription,
       url: `https://vedatek.co.uk/services/${service.slug}`,
       images: [
         {
@@ -54,6 +63,12 @@ export async function generateMetadata({
           alt: `${service.title} - VEDATEK`,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title: `${service.title} | VEDATEK`,
+      description: descriptionMap[service.slug] ?? service.shortDescription,
+      images: ["https://vedatek.co.uk/og-image.png"],
     },
   };
 }
@@ -75,26 +90,53 @@ export default async function ServiceDetailPage({
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": service.title,
-    "description": service.shortDescription,
-    "provider": {
-      "@type": "Organization",
-      "name": "VEDATEK",
-      "url": "https://vedatek.co.uk"
-    },
-    "areaServed": "GB",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": service.title,
-      "itemListElement": service.capabilities.map((cap) => ({
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": cap
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://vedatek.co.uk"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://vedatek.co.uk/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": service.title,
+            "item": `https://vedatek.co.uk/services/${service.slug}`
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "name": service.title,
+        "description": service.fullDescription,
+        "provider": {
+          "@type": "Organization",
+          "name": "VEDATEK",
+          "url": "https://vedatek.co.uk"
+        },
+        "areaServed": "GB",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": service.title,
+          "itemListElement": service.capabilities.map((cap) => ({
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": cap
+            }
+          }))
         }
-      }))
-    }
+      }
+    ]
   };
 
   return (

@@ -4,22 +4,25 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "VEDATEK | Technology that works for your business",
+  title: "VEDATEK | Linnworks, Business Central & EDI Integration Specialists",
   description:
-    "VEDATEK helps UK businesses connect systems, automate work and build reliable technology. Business value first, technical depth second.",
+    "VEDATEK is a UK technology consultancy specialising in Linnworks integration, Business Central integration, EDI automation, AI, custom software and cloud DevOps. Helping e-commerce and wholesale businesses connect systems and eliminate manual work.",
   keywords: [
+    "Linnworks integration UK",
+    "Linnworks consultant UK",
+    "Business Central integration UK",
+    "EDI integration UK",
+    "EDI consultant UK",
+    "systems integration consultant UK",
     "UK technology consultancy",
-    "technology that works for your business",
-    "AI and automation",
-    "custom software development",
-    "systems integration",
-    "business process automation",
-    "EDI integration",
-    "Business Central integration",
-    "Linnworks integration",
-    "cloud consulting",
-    "DevOps consulting",
-    "SRE consulting"
+    "AI automation UK",
+    "custom software development UK",
+    "EDI automation UK",
+    "Business Central Linnworks integration",
+    "Shopify Business Central integration",
+    "cloud DevOps consultant UK",
+    "SRE consultant UK",
+    "Terraform consultant UK"
   ],
   metadataBase: new URL("https://vedatek.co.uk"),
   alternates: {
@@ -30,8 +33,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "VEDATEK | Technology that works for your business",
-    description: "Connecting systems, automating work and building reliable technology through AI, software, cloud engineering and integrations.",
+    title: "VEDATEK | Linnworks, Business Central & EDI Integration Specialists",
+    description: "UK technology consultancy specialising in Linnworks integration, Business Central, EDI automation, AI, cloud DevOps and custom software for e-commerce and wholesale businesses.",
     url: "https://vedatek.co.uk",
     siteName: "VEDATEK",
     locale: "en_GB",
@@ -40,15 +43,15 @@ export const metadata: Metadata = {
       {
         url: "https://vedatek.co.uk/og-image.png",
         width: 1200,
-        height: 1200,
-        alt: "VEDATEK | Technology that works for your business",
+        height: 630,
+        alt: "VEDATEK | UK Technology Consultancy — Linnworks, Business Central & EDI Integration",
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "VEDATEK | Technology that works for your business",
-    description: "Connecting systems, automating work and building reliable technology through AI, software, cloud engineering and integrations.",
+    title: "VEDATEK | Linnworks, Business Central & EDI Integration Specialists",
+    description: "UK technology consultancy specialising in Linnworks integration, Business Central, EDI automation, AI, cloud DevOps and custom software.",
     images: ["https://vedatek.co.uk/og-image.png"],
   }
 };
@@ -95,16 +98,19 @@ export default function RootLayout({
           "addressCountry": "GB"
         },
         "knowsAbout": [
+          "Linnworks Integration",
+          "Business Central Integration",
+          "EDI Integration UK",
+          "EDI Automation",
+          "Systems Integration Consultant UK",
           "DevOps Engineering",
           "Site Reliability Engineering (SRE)",
-          "Systems Integration",
           "Microsoft Dynamics 365 Business Central",
-          "Linnworks",
-          "EDI Automation",
-          "Custom Software Development",
-          "E-Commerce Solutions",
-          "AI Business Tools",
-          "AWS Cloud Infrastructure"
+          "Shopify Integration",
+          "AI Business Automation",
+          "AWS Cloud Infrastructure",
+          "Terraform Infrastructure as Code",
+          "Custom Software Development UK"
         ]
       }
     ]

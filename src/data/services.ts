@@ -76,70 +76,74 @@ export const services: Service[] = [
   {
     slug: "systems-integration",
     title: "Systems Integration",
-    shortDescription: "Connect ERP, e-commerce, EDI, APIs, and business platforms to eliminate data silos.",
-    fullDescription: "Keep your business synchronized. We connect disconnected systems to ensure seamless data flows between e-commerce stores, ERP systems, warehouse platforms, and suppliers, replacing manual data entry with reliable, automated synchronization.",
+    shortDescription: "Linnworks, Business Central, Shopify and ERP integration specialists. Connect your business systems and eliminate manual data entry.",
+    fullDescription: "VEDATEK specialises in systems integration for UK e-commerce, wholesale and distribution businesses. We connect Microsoft Dynamics 365 Business Central with Linnworks, Shopify, courier APIs (Royal Mail, DPD, DHL, FedEx) and third-party logistics platforms. Our integrations replace manual order entry, stock discrepancies and invoice mismatches with reliable, automated data synchronisation. Whether you need a Linnworks to Business Central integration, a Shopify to ERP connector, or a middleware layer connecting multiple warehouse and e-commerce systems, we design and build production-grade solutions that scale with your business.",
     iconName: "Network",
     capabilities: [
-      "Connecting disconnected business systems",
-      "API integrations (REST, SOAP, Webhooks)",
-      "ERP integrations (Microsoft Dynamics 365 Business Central)",
-      "E-commerce & warehouse integrations (Linnworks, Shopify)",
-      "Logistics & courier integrations (Royal Mail, DPD, DHL, FedEx APIs)",
-      "WMS order and shipment synchronization pipelines",
-      "Real-time data synchronization pipelines",
-      "Middleware and integration architecture"
+      "Linnworks integration with Business Central, Shopify and ERPs",
+      "Microsoft Dynamics 365 Business Central API integration",
+      "Shopify to ERP and WMS integration",
+      "Courier and logistics API integration (Royal Mail, DPD, DHL, FedEx)",
+      "EDI and trading partner integration",
+      "REST, SOAP, Webhooks and SFTP-based integrations",
+      "WMS order and shipment synchronisation pipelines",
+      "Real-time and batch data synchronisation",
+      "Custom integration middleware and message brokering"
     ],
     technologies: [
       "Dynamics 365 Business Central",
       "Linnworks",
+      "Shopify",
       "REST APIs",
       "Webhooks",
       "SFTP",
       "XML",
       "JSON",
-      "CSV",
       "Custom Integration Middleware"
     ],
     businessBenefits: [
-      "Eliminate double entry of orders, stock, and invoices",
-      "Synchronize inventory levels across multiple channels in real time",
-      "Reduce fulfillment errors caused by manual transcription",
-      "Gain a single unified view of operational data across platforms"
+      "Eliminate double entry of orders, stock and invoices across platforms",
+      "Synchronise inventory levels across multiple channels in real time",
+      "Reduce fulfilment errors caused by manual transcription",
+      "Gain a single unified view of operational data across your entire business",
+      "Scale order volume without adding headcount to operations"
     ]
   },
   {
     slug: "edi-automation",
     title: "EDI & Business Process Automation",
-    shortDescription: "Automate order processing, invoicing and fulfilment flows with suppliers and trading partners.",
-    fullDescription: "Make B2B transactions seamless. We implement automated electronic data interchange (EDI) and business workflows to automatically ingest orders, validate data, dispatch fulfillment commands, and transmit invoices without human intervention.",
+    shortDescription: "EDI integration and automation for UK wholesale, distribution and e-commerce businesses. EDIFACT, ANSI X12, AS2 and SFTP EDI specialists.",
+    fullDescription: "VEDATEK provides EDI integration and business process automation for UK wholesale distributors, e-commerce businesses and manufacturers that need to trade electronically with retail customers, suppliers and logistics partners. We implement EDIFACT, ANSI X12 and proprietary EDI formats over AS2, SFTP and API connections, integrating directly with Business Central, Linnworks and other ERP and WMS platforms. Our EDI solutions automate purchase order ingestion, invoice generation, despatch advice and acknowledgement flows, removing the need for manual processing and reducing the risk of compliance errors with major retailers and supermarkets.",
     iconName: "RefreshCw",
     capabilities: [
-      "Automated B2B order processing",
-      "Purchase order (PO) workflows",
+      "EDI integration with major UK retailers and supermarkets",
+      "EDIFACT and ANSI X12 message processing",
+      "AS2 and SFTP EDI connectivity",
+      "Automated purchase order (PO) ingestion and validation",
       "Invoice processing and financial automation",
-      "Dispatch and fulfillment integrations",
-      "Batch / lot tracking and expiration validation workflows",
+      "Despatch advice and acknowledgement flows",
+      "EDI integration with Business Central and Linnworks",
+      "Batch and lot tracking with expiration validation",
       "Supplier and customer EDI onboarding",
-      "Data transformation and schema validation",
-      "MHRA Good Distribution Practice (GDP) compliant workflow validation"
+      "MHRA GDP-compliant workflow validation"
     ],
     technologies: [
       "EDIFACT",
       "ANSI X12",
+      "AS2",
+      "SFTP",
       "XML",
       "JSON",
-      "CSV",
-      "SFTP",
-      "AS2",
-      "Custom Validation Engines",
+      "Business Central",
       "Linnworks",
-      "Business Central"
+      "Custom Validation Engines"
     ],
     businessBenefits: [
-      "Comply with retail customer requirements for EDI transactions",
-      "Ingest purchase orders instantly and flag validation errors",
-      "Accelerate payment cycles through automated invoicing",
-      "Reduce staff hours dedicated to repetitive B2B ordering tasks"
+      "Comply with retail customer requirements for electronic trading",
+      "Ingest purchase orders instantly and flag validation errors automatically",
+      "Accelerate payment cycles through automated invoice generation",
+      "Reduce staff hours dedicated to repetitive B2B ordering and fulfilment tasks",
+      "Trade electronically with major supermarkets, pharmacy chains and marketplaces"
     ]
   },
   {
@@ -240,21 +244,23 @@ export const services: Service[] = [
   {
     slug: "technology-consulting",
     title: "Technology Consulting",
-    shortDescription: "Technology strategy, architecture reviews, and fractional technology expertise.",
-    fullDescription: "Navigate complex technology decisions with confidence. We provide strategic consulting, architecture reviews, digital transformation roadmaps, and fractional CTO/technical leadership to guide your growth without full-time overhead.",
+    shortDescription: "Technology strategy, architecture reviews, fractional CTO services and digital transformation for UK businesses.",
+    fullDescription: "Navigate complex technology decisions with confidence. VEDATEK provides strategic technology consulting, architecture reviews, digital transformation roadmaps and fractional CTO or technical leadership engagements for growing UK businesses. Whether you need an independent review of your current systems, guidance on selecting the right ERP, WMS or integration platform, or senior engineering leadership without full-time overhead, we bring the commercial and technical perspective to help you make better decisions faster.",
     iconName: "Compass",
     capabilities: [
-      "Technology strategy & digital transformation maps",
-      "Technical architecture reviews & system audits",
-      "Fractional CTO & technical leadership advisory",
-      "Legacy system modernization roadmaps",
-      "Vendor assessment & technology selection advice",
-      "Complex technical problem solving"
+      "Technology strategy and digital transformation roadmaps",
+      "Technical architecture reviews and system audits",
+      "Fractional CTO and technical leadership advisory",
+      "ERP, WMS and integration platform selection",
+      "Legacy system modernisation roadmaps",
+      "Vendor assessment and technology selection",
+      "Integration architecture design",
+      "Technology Health Check assessments"
     ],
     technologies: [
       "Enterprise Architecture",
       "Technology Audits",
-      "Cost Optimization Reviews",
+      "Cost Optimisation Reviews",
       "Risk Assessments",
       "Strategic Roadmaps"
     ],
@@ -262,7 +268,8 @@ export const services: Service[] = [
       "Avoid expensive technology mistakes and software mis-purchases",
       "Align IT investments directly with long-term business goals",
       "Access senior engineering leadership on a flexible part-time basis",
-      "Obtain an objective, independent review of your current systems"
+      "Obtain an objective, independent review of your current systems",
+      "Make confident decisions on ERP, WMS and integration platform selection"
     ]
   }
 ];
