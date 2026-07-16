@@ -9,6 +9,7 @@ export default function Footer() {
     email: "hello@vedatek.co.uk",
     phone: "07907 090351",
     location: "United Kingdom",
+    linkedin: "https://www.linkedin.com/company/vedatek"
   };
 
   const serviceLinks = [
@@ -107,6 +108,12 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-brand-indigo shrink-0" />
                 <span>{contactDetails.location}</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="text-[#0077b5] shrink-0"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                <a href={contactDetails.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-brand-cyan transition-colors duration-200 focus:outline-none">
+                  LinkedIn Profile
+                </a>
               </li>
             </ul>
           </div>
