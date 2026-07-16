@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -7,6 +7,7 @@ export default function Footer() {
   // Mock contact details, easily configurable
   const contactDetails = {
     email: "hello@vedatek.co.uk",
+    phone: "07907 090351",
     location: "United Kingdom",
   };
 
@@ -95,6 +96,12 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-brand-cyan shrink-0" />
                 <a href={`mailto:${contactDetails.email}`} className="hover:text-brand-cyan transition-colors duration-200 focus:outline-none">
                   {contactDetails.email}
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-brand-teal shrink-0" />
+                <a href={`tel:${contactDetails.phone.replace(/\s/g, "")}`} className="hover:text-brand-cyan transition-colors duration-200 focus:outline-none">
+                  {contactDetails.phone}
                 </a>
               </li>
               <li className="flex items-center gap-2">
