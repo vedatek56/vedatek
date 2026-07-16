@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
 
 export const metadata: Metadata = {
   title: "VEDATEK | Linnworks, Business Central & EDI Integration Specialists",
@@ -124,7 +126,7 @@ export default function RootLayout({
       <head>
         <meta
           httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vedatek.co.uk; font-src 'self' data:; connect-src 'self' https://api.web3forms.com;"
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vedatek.co.uk https://www.google-analytics.com; font-src 'self' data:; connect-src 'self' https://api.web3forms.com https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com;"
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
       </head>
@@ -133,6 +135,19 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-8JP7NQGCBC"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8JP7NQGCBC');
+          `}
+        </Script>
         <Navbar />
         <main className="flex-grow pt-16">
           {children}
