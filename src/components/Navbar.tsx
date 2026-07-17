@@ -82,13 +82,19 @@ export default function Navbar() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center gap-4">
+            <Link
+              href="/book"
+              className="text-xs uppercase tracking-wider font-bold text-slate-200 hover:text-brand-cyan border border-brand-cyan/40 hover:bg-brand-cyan/5 px-5 py-2.5 rounded-full transition-all focus:outline-none"
+            >
+              Book Call
+            </Link>
             <Link
               href="/contact"
-              className="group flex items-center gap-2 bg-gradient-to-r from-brand-indigo to-brand-cyan hover:from-brand-indigo/90 hover:to-brand-cyan/90 text-slate-950 text-sm font-semibold py-2.5 px-5 rounded-full shadow-lg shadow-brand-indigo/10 hover:shadow-brand-indigo/25 transition-all duration-300 focus:outline-none"
+              className="group flex items-center gap-2 bg-gradient-to-r from-brand-indigo to-brand-cyan hover:from-brand-indigo/90 hover:to-brand-cyan/90 text-slate-950 text-xs uppercase tracking-wider font-bold py-2.5 px-5 rounded-full shadow-lg shadow-brand-indigo/10 hover:shadow-brand-indigo/25 transition-all duration-300 focus:outline-none"
             >
-              Discuss Your Challenge
-              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              Discuss Challenge
+              <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>
 
@@ -133,7 +139,14 @@ export default function Navbar() {
                   </Link>
                 );
               })}
-              <div className="pt-4 border-t border-brand-border/60">
+              <div className="pt-4 border-t border-brand-border/60 flex flex-col gap-2.5">
+                <Link
+                  href="/book"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center justify-center w-full border border-brand-cyan/40 hover:bg-brand-cyan/5 text-slate-100 font-semibold py-3 px-4 rounded-xl text-sm transition-all focus:outline-none"
+                >
+                  Book Discovery Call (30 mins)
+                </Link>
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}

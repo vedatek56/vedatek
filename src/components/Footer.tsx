@@ -24,7 +24,7 @@ export default function Footer() {
     { name: "Services", href: "/services" },
     { name: "Solutions", href: "/solutions" },
     { name: "About Us", href: "/about" },
-    { name: "Insights", href: "/solutions" }, // Map to solutions since we don't have blog posts yet
+    { name: "Case Studies", href: "/case-studies" },
     { name: "Contact", href: "/contact" }
   ];
 

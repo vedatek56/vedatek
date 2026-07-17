@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ShoppingBag, Truck, LineChart, Cpu, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import LeadMagnet from "@/components/LeadMagnet";
 
 export default function SolutionsClient() {
   const customerProfiles = [
@@ -149,6 +150,9 @@ export default function SolutionsClient() {
             );
           })}
         </div>
+
+        {/* Lead Magnet Download Section */}
+        <LeadMagnet />
 
         {/* Custom Consultation CTA */}
         <div className="mt-20 bg-slate-900/40 border border-brand-border/60 rounded-3xl p-8 sm:p-12 text-center max-w-3xl mx-auto space-y-6">

@@ -1,0 +1,123 @@
+VEDATEK - THE 25 COSTLIEST SYSTEMS INTEGRATION MISTAKES (AND HOW TO AVOID THEM)
+Senior engineering guidelines for UK e-commerce and B2B wholesale distributors.
+
+==================================================
+EXECUTIVE SUMMARY
+==================================================
+Systems integration determines the speed and reliability of your operations. When storefronts, middleware, inventory managers, and ERP ledgers don't sync cleanly, data drifts, inventory oversells, and manual corrections eat into profit margins.
+
+Below are the 25 most critical integration mistakes identified by our senior engineers across dozens of enterprise setups.
+
+==================================================
+THE 25 MISTAKES
+==================================================
+
+1. Hard-Coding Credentials
+   - Mistake: Storing API tokens, keys, and passwords directly in codebase files.
+   - Fix: Use environment variables, secret managers (AWS Secrets Manager, Azure Key Vault), and enforce automated rotation policies.
+
+2. Lack of Rate Limit Protection
+   - Mistake: Spamming third-party APIs (Shopify, Linnworks, Business Central) without tracking rate limits. This leads to API blocks and failed data syncs.
+   - Fix: Implement queuing, token buckets, and exponential backoff.
+
+3. Silent Failures (No Alerts)
+   - Mistake: Integration fails in the background and nobody knows until customers complain about delayed orders.
+   - Fix: Configure continuous log monitoring and immediate Slack/email alerts for 5xx errors.
+
+4. Unstructured Logging
+   - Mistake: Writing generic log text like "Order sync failed" instead of structured JSON objects with trace IDs, order refs, and payload sizes.
+   - Fix: Adopt structured logging (JSON format) and centralized SRE platforms (Grafana, Loki, Splunk).
+
+5. No Staging / Sandbox Testing
+   - Mistake: Testing custom API sync code directly on live production accounts.
+   - Fix: Always isolate development inside clean sandbox accounts with synthetic test data.
+
+6. Missing Idempotency Keys
+   - Mistake: Sending duplicate network requests (e.g. on a retry) resulting in duplicate orders, duplicate payments, or double shipments.
+   - Fix: Enforce unique idempotency keys on every transaction.
+
+7. Database Syncing via Cron Job Only
+   - Mistake: Relying entirely on intervals (e.g. running sync every 15 mins) instead of event-driven Webhooks.
+   - Fix: Move to webhook-driven events for real-time order updates, using cron runs only as a nightly reconciliation backup.
+
+8. No Error Queues (DLQ)
+   - Mistake: Discarding failed payloads when an API call times out or encounters a 500 error.
+   - Fix: Direct failed sync tasks into a Dead Letter Queue (DLQ) for automatic retries or manual review.
+
+9. Oversimplifying ERP Sync Layouts
+   - Mistake: Mapping storefront categories directly to ERP general ledgers without separating tax classes, shipping codes, and local VAT rules.
+   - Fix: Build a dedicated mapping schema separating accounting tax classes from inventory tags.
+
+10. Synchronous Processing
+    - Mistake: Blocking the user thread while waiting for a secondary system (like a courier API) to respond.
+    - Fix: Use asynchronous task workers (RabbitMQ, AWS SQS) to process tasks in the background.
+
+11. Hard-Coding Shipping Carriers
+    - Mistake: Coding DPD, Royal Mail, or FedEx endpoints directly into order handlers.
+    - Fix: Use abstraction layers or multi-carrier platforms so shipping providers can be added/removed without code changes.
+
+12. No Database Transaction Rollbacks
+    - Mistake: Writing partial order data to the ERP database, then failing halfway through without restoring the database to its clean original state.
+    - Fix: Use transaction-scoped database operations with rollback logic.
+
+13. Ignoring Payload Versioning
+    - Mistake: Building connections without referencing API versions. A single silent platform upgrade will break your entire flow.
+    - Fix: Pin connections to specific API versions (e.g. v2026-07).
+
+14. Thin Inventory Reconciliation
+    - Mistake: Trusting that the database is always 100% in sync without double-checking.
+    - Fix: Enforce a nightly bulk inventory match between your storefront (Shopify) and ERP (Business Central) to auto-reconcile minor drifts.
+
+15. Hard-Coding Currency and Exchange Rates
+    - Mistake: Assuming local currency is fixed to GBP, causing multi-currency Shopify orders to sync with incorrect general ledger tallies.
+    - Fix: Feed real-time currency converters or rely on storefront currency settlement payloads.
+
+16. Security Without Encryption
+    - Mistake: Moving customer data (names, phone numbers, addresses) across systems in plain, unencrypted text.
+    - Fix: Force HTTPS connections for all API endpoints and encrypt sensitive fields at rest.
+
+17. Trusting Cloud Upstream Availability
+    - Mistake: Designing integrations under the assumption that AWS, Azure, or Shopify are always online.
+    - Fix: Build offline queuing mechanisms. If the target server goes offline, tasks should queue up locally and sync when it returns.
+
+18. Inconsistent Data Types
+    - Mistake: Sending string values ("10") to fields expecting numeric values, or dates in different formats (DD-MM-YYYY vs YYYY-MM-DD), causing silent DB insert fails.
+    - Fix: Implement runtime validation (Zod, TypeScript types) to sanitize payloads.
+
+19. Over-Customization of Middleware
+    - Mistake: Writing complex business logic inside Linnworks or Shopify connectors instead of keeping logic inside the central ERP.
+    - Fix: Keep middleware clean. Middleware should only connect and map; business logic should sit in the system of record.
+
+20. Lack of Technical Documentation
+    - Mistake: Leaving integrations undocumented. If the primary developer leaves, the business is left with an unmaintainable system.
+    - Fix: Document every custom connection, field mapping sheet, and recovery procedure inside a centralized Git repository.
+
+21. Syncing Draft Products
+    - Mistake: Pushing new item data to channels before they are ready, resulting in incomplete listings displaying to customers.
+    - Fix: Implement status checks (e.g. status === "active") before triggering inventory updates.
+
+22. No Circuit Breakers
+    - Mistake: Continuing to spam a server that is returning 503 errors, overloading the connection, and wasting API limits.
+    - Fix: Add circuit breakers. If a connection fails 5 times, stop requests for 60 seconds.
+
+23. Ignoring Webhook Security
+    - Mistake: Processing webhook payloads without verifying their digital signature (HMAC headers), exposing your ERP to fake order inputs.
+    - Fix: Always verify HMAC signatures using your platform's secret key.
+
+24. Manual Secret Rotation
+    - Mistake: Relying on developers manually updating passwords once a year.
+    - Fix: Automate rotation of secrets using cloud key management services.
+
+25. Scaling Without Observability
+    - Mistake: Increasing order volume without measuring pipeline latency, causing bottlenecks as transaction speeds slow down.
+    - Fix: Monitor endpoint response times continuously to identify slow databases.
+
+==================================================
+NEED HELP WITH YOUR SYSTEM?
+==================================================
+If you are planning an integration project or want to fix sync latency, schedule a free diagnostic review with a senior VEDATEK engineer.
+
+🌐 Visit: www.vedatek.co.uk
+📅 Book a Call: www.vedatek.co.uk/book
+✉️ Email: hello@vedatek.co.uk
+📞 Phone: 07907 090351
