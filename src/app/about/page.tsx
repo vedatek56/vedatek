@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Star, ShieldCheck, Cpu, Award, Cloud, GitBranch } from "lucide-react";
+import { ArrowRight, Star, ShieldCheck, Cpu } from "lucide-react";
 import { pageSeo } from "@/data/seo";
 
 export const metadata: Metadata = {
@@ -135,60 +135,45 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Founder Section */}
+        {/* Team & Expertise Section */}
         <div className="pt-20 space-y-10">
           <h2 className="text-xl font-bold text-slate-200 tracking-wide uppercase border-l-2 border-brand-cyan pl-3">
-            Meet the Co-Founder
+            Our Expertise & Leadership
           </h2>
 
           <div className="bg-slate-900/20 border border-brand-border/40 rounded-3xl p-6 sm:p-10 flex flex-col sm:flex-row gap-8 items-start">
             {/* Avatar placeholder */}
             <div className="shrink-0 flex flex-col items-center gap-3">
               <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-brand-indigo/30 to-brand-cyan/20 border border-brand-border/60 flex items-center justify-center">
-                <span className="text-3xl font-black text-brand-cyan select-none">RK</span>
+                <span className="text-3xl font-black text-brand-cyan select-none">VT</span>
               </div>
-              <span className="text-xs text-slate-500 font-mono tracking-wide">Co-Founder</span>
+              <span className="text-xs text-slate-500 font-mono tracking-wide">VEDATEK</span>
             </div>
 
-            {/* Bio */}
+            {/* Content */}
             <div className="space-y-4 flex-1">
               <div>
-                <h3 className="text-xl font-bold text-white">Riddhi Khunt</h3>
-                <p className="text-xs text-brand-cyan font-mono tracking-widest uppercase mt-1">Co-Founder · SRE &amp; Cloud Engineering</p>
+                <h3 className="text-xl font-bold text-white">Built on Senior Engineering Experience</h3>
+                <p className="text-xs text-brand-cyan font-mono tracking-widest uppercase mt-1">Direct, Business-First Delivery</p>
               </div>
 
               <p className="text-slate-400 text-sm leading-relaxed">
-                Riddhi brings over a decade of hands-on engineering experience from some of the most demanding technology environments in the world — spanning global financial services, large-scale e-commerce, and major UK retail banking.
+                VEDATEK is built on senior engineering expertise spanning more than 15 years across cloud computing, distributed systems infrastructure, software development, and systems integration.
               </p>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Her specialisms sit at the intersection of reliability, cloud infrastructure and automation. She has designed and operated observability platforms at scale using Grafana, Loki, Splunk and Prometheus; built end-to-end Kubernetes environments using Terraform and Helm; and led cloud migrations across AWS, Azure and GCP for distributed systems handling millions of daily transactions.
+                Rather than deploying junior developers or account managers, VEDATEK is run and led by senior practitioners who have directly engineered, migrated, and maintained critical operations handling millions of daily transactions inside global financial services, scaling e-commerce platforms, and UK retail banking environments.
               </p>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Within UK banking, Riddhi led CI/CD infrastructure for over 17 project teams and contributed to over £400,000 in client cost savings through pipeline optimisation — reducing provisioning lead time from one week to one day through containerisation.
-              </p>
-              <p className="text-slate-300 text-sm font-medium italic">
-                &ldquo;Everything as code. Automation is not an afterthought — it is the foundation on which reliable, scalable systems are built.&rdquo;
+                We approach systems with a simple philosophy: **Everything as Code**. By automating workflows, optimizing pipelines, and connecting databases cleanly, we help businesses eliminate manual data errors and stabilize their digital operations.
               </p>
 
-              {/* Expertise tags */}
+              {/* Core Technologies */}
               <div className="flex flex-wrap gap-2 pt-2">
-                {["AWS", "Azure", "GCP", "Kubernetes", "Terraform", "Grafana", "Prometheus", "CI/CD", "SRE", "OpenTelemetry"].map((tag) => (
+                {["Linnworks", "Dynamics 365 Business Central", "EDIFACT / AS2", "AWS / Azure / GCP", "Kubernetes", "Terraform", "SRE & Observability", "CI/CD Automation"].map((tag) => (
                   <span key={tag} className="bg-slate-900 border border-slate-800 text-slate-300 font-mono text-xs px-3 py-1 rounded-md">
                     {tag}
                   </span>
                 ))}
-              </div>
-
-              {/* Certifications */}
-              <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <div className="flex items-center gap-2 bg-slate-900/60 border border-brand-border/40 rounded-xl px-4 py-2.5">
-                  <Award className="w-4 h-4 text-brand-cyan shrink-0" />
-                  <span className="text-xs text-slate-300">Microsoft Certified: Azure Developer Associate</span>
-                </div>
-                <div className="flex items-center gap-2 bg-slate-900/60 border border-brand-border/40 rounded-xl px-4 py-2.5">
-                  <Cloud className="w-4 h-4 text-brand-teal shrink-0" />
-                  <span className="text-xs text-slate-300">Microsoft Certified: Azure Fundamentals</span>
-                </div>
               </div>
             </div>
           </div>
