@@ -185,18 +185,18 @@ export default function AboutPage() {
               <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-brand-indigo/30 to-brand-cyan/20 border border-brand-border/60 flex items-center justify-center">
                 <span className="text-3xl font-black text-brand-cyan select-none">RP</span>
               </div>
-              <span className="text-xs text-slate-500 font-mono tracking-wide">Co-Founder</span>
+              <span className="text-xs text-slate-500 font-mono tracking-wide">Founder</span>
             </div>
 
             {/* Content */}
             <div className="space-y-4 flex-1">
               <div>
                 <h3 className="text-xl font-bold text-white">Riddhi Patel</h3>
-                <p className="text-xs text-brand-cyan font-mono tracking-widest uppercase mt-1">Co-Founder &amp; Director</p>
+                <p className="text-xs text-brand-cyan font-mono tracking-widest uppercase mt-1">Founder &amp; Director</p>
               </div>
 
               <p className="text-slate-400 text-sm leading-relaxed">
-                Riddhi Patel co-founded VEDATEK to bridge the gap between high-level technology planning and real-world business operations. With a background focused on technical project management, client delivery, and operational scoping, she directs VEDATEK&apos;s engagement model, ensuring our integration and automation builds map directly to our clients&apos; commercial and financial objectives.
+                Riddhi Patel founded VEDATEK to bridge the gap between high-level technology planning and real-world business operations. With a background focused on technical project management, client delivery, and operational scoping, she directs VEDATEK&apos;s engagement model, ensuring our integration and automation builds map directly to our clients&apos; commercial and financial objectives.
               </p>
               <p className="text-slate-400 text-sm leading-relaxed">
                 She partners closely with B2B suppliers, wholesale distributors, and multi-channel retailers to define system scopes, map operational dependencies, and ensure the successful delivery of complex systems integration and cloud projects.
