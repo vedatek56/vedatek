@@ -29,7 +29,7 @@ export default function HeroVisual() {
       <div className="absolute inset-0 opacity-40 bg-[linear-gradient(to_right,rgba(148,163,184,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.15)_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
       
       {/* Absolute Ambient Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-brand-indigo/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-brand-indigo/10 rounded-full pointer-events-none"></div>
 
       {/* Connectivity SVG */}
       <svg className="w-full h-full max-w-[800px] max-h-[500px] absolute z-10" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
