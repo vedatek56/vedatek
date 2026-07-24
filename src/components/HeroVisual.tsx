@@ -24,7 +24,7 @@ export default function HeroVisual() {
   ];
 
   return (
-    <div className="w-full relative h-[400px] sm:h-[500px] flex items-center justify-center overflow-hidden bg-slate-900/40 rounded-2xl border border-brand-border/40 shadow-inner">
+    <div className="w-full relative h-[350px] sm:h-[500px] flex items-center justify-center overflow-hidden bg-slate-900/40 rounded-2xl border border-brand-border/40 shadow-inner [content-visibility:auto]">
       {/* Background Grid Pattern - Soft light grey lines */}
       <div className="absolute inset-0 opacity-40 bg-[linear-gradient(to_right,rgba(148,163,184,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.15)_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
       
