@@ -192,50 +192,26 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
             <div className="flex flex-col space-y-6 text-left lg:col-span-6">
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
+              <div>
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-cyan/20 bg-brand-cyan/10 px-3 py-1 text-xs font-semibold tracking-wider text-brand-cyan">
                   <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-brand-cyan" />
                   UK Technology Consultancy
                 </span>
-              </motion.div>
+              </div>
 
-              <motion.h1
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-4xl font-black leading-none tracking-tight text-white sm:text-5xl lg:text-6xl"
-              >
+              <h1 className="text-4xl font-black leading-none tracking-tight text-white sm:text-5xl lg:text-6xl">
                 Technology that works for your business.
-              </motion.h1>
+              </h1>
 
-              <motion.p
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="max-w-xl text-lg leading-relaxed text-slate-400"
-              >
+              <p className="max-w-xl text-lg leading-relaxed text-slate-400">
                 We connect systems, automate manual work and build reliable technology from AI and software to cloud and integrations.
-              </motion.p>
+              </p>
 
-              <motion.p
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.25 }}
-                className="max-w-xl text-sm leading-relaxed text-slate-500"
-              >
+              <p className="max-w-xl text-sm leading-relaxed text-slate-500">
                 Practical technology solutions built around real business problems.
-              </motion.p>
+              </p>
 
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="flex flex-col gap-4 pt-4 sm:flex-row"
-              >
+              <div className="flex flex-col gap-4 pt-4 sm:flex-row">
                 <Link
                   href="/contact"
                   className="group flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-indigo to-brand-cyan px-7 py-3.5 font-bold text-slate-950 shadow-lg shadow-brand-indigo/15 transition-all duration-300 hover:from-brand-indigo/90 hover:to-brand-cyan/90 hover:shadow-brand-indigo/25"
@@ -249,7 +225,7 @@ export default function Home() {
                 >
                   Explore Our Services
                 </Link>
-              </motion.div>
+              </div>
             </div>
 
             <div className="lg:col-span-6">
