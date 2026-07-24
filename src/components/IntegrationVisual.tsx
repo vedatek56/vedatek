@@ -87,7 +87,7 @@ export default function IntegrationVisual() {
                   <Icon className="w-5 h-5" />
                 </div>
                 <div className="flex-1 text-left min-w-0">
-                  <h4 className="text-sm font-bold text-slate-200 tracking-wide truncate">{step.title}</h4>
+                  <h3 className="text-sm font-bold text-slate-200 tracking-wide truncate">{step.title}</h3>
                   <p className="text-xs text-slate-400 truncate">{step.description}</p>
                 </div>
                 {step.direction && (
@@ -105,7 +105,7 @@ export default function IntegrationVisual() {
       <div className="lg:col-span-6 flex flex-col space-y-6 justify-center">
         <div>
           <span className="text-xs uppercase tracking-widest text-brand-cyan font-bold block mb-1">Example: Connected Commerce &amp; Operations</span>
-          <h3 className="text-2xl font-bold text-slate-100 tracking-tight">Connected commerce and operations</h3>
+          <h2 className="text-2xl font-bold text-slate-100 tracking-tight">Connected commerce and operations</h2>
           <p className="text-sm text-slate-400 mt-2 leading-relaxed">
             One example of how VEDATEK connects complex business systems. The same engineering approach can be adapted across platforms, industries and technology environments.
           </p>
@@ -124,8 +124,8 @@ export default function IntegrationVisual() {
                       <StepIcon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-base font-bold text-slate-100">{current.title}</h4>
-                      <span className="text-xs text-brand-cyan/85">{current.description}</span>
+                      <h3 className="text-base font-bold text-slate-100">{current.title}</h3>
+                      <span className="text-xs text-brand-cyan">{current.description}</span>
                     </div>
                   </div>
                   <p className="text-sm text-slate-400 leading-relaxed font-light">

@@ -41,7 +41,7 @@ export default function Footer() {
           
           {/* Brand Col */}
           <div className="md:col-span-5 flex flex-col space-y-4">
-            <Link href="/" className="flex items-center gap-1 focus:outline-none">
+            <Link href="/" aria-label="VEDATEK Homepage" className="flex items-center gap-1 focus:outline-none">
               <span className="text-xl font-bold tracking-wider text-slate-100">
                 VEDA
               </span>
@@ -64,7 +64,7 @@ export default function Footer() {
 
           {/* Services Links Col */}
           <div className="md:col-span-3 flex flex-col space-y-4">
-            <h4 className="text-sm font-semibold tracking-wider text-slate-200 uppercase">Capabilities</h4>
+            <h3 className="text-sm font-semibold tracking-wider text-slate-200 uppercase">Capabilities</h3>
             <ul className="space-y-2.5 text-sm">
               {serviceLinks.map((link) => (
                 <li key={link.name}>
@@ -78,7 +78,7 @@ export default function Footer() {
 
           {/* Quick Links Col */}
           <div className="md:col-span-2 flex flex-col space-y-4">
-            <h4 className="text-sm font-semibold tracking-wider text-slate-200 uppercase">Company</h4>
+            <h3 className="text-sm font-semibold tracking-wider text-slate-200 uppercase">Company</h3>
             <ul className="space-y-2.5 text-sm">
               {companyLinks.map((link) => (
                 <li key={link.name}>
@@ -92,7 +92,7 @@ export default function Footer() {
 
           {/* Contact Details Col */}
           <div className="md:col-span-2 flex flex-col space-y-4">
-            <h4 className="text-sm font-semibold tracking-wider text-slate-200 uppercase">Connect</h4>
+            <h3 className="text-sm font-semibold tracking-wider text-slate-200 uppercase">Connect</h3>
             <ul className="space-y-3.5 text-sm">
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-brand-cyan shrink-0" />
@@ -112,7 +112,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="text-[#0077b5] shrink-0"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                <a href={contactDetails.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-brand-cyan transition-colors duration-200 focus:outline-none">
+                <a href={contactDetails.linkedin} aria-label="VEDATEK LinkedIn Profile" target="_blank" rel="noopener noreferrer" className="hover:text-brand-cyan transition-colors duration-200 focus:outline-none">
                   LinkedIn Profile
                 </a>
               </li>
