@@ -25,7 +25,7 @@ export default function PartnerMarquee() {
   const scrollItems = [...partners, ...partners, ...partners];
 
   return (
-    <div className="w-full py-8 bg-slate-900 border-y border-slate-800 overflow-hidden relative select-none [content-visibility:auto]">
+    <div className="w-full py-8 bg-slate-900 border-y border-slate-800 overflow-hidden relative select-none">
       {/* Gradient Fades on edges */}
       <div className="absolute top-0 left-0 w-16 md:w-32 h-full bg-gradient-to-r from-slate-950 via-slate-950/40 to-transparent z-10 pointer-events-none"></div>
       <div className="absolute top-0 right-0 w-16 md:w-32 h-full bg-gradient-to-l from-slate-950 via-slate-950/40 to-transparent z-10 pointer-events-none"></div>
