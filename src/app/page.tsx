@@ -587,14 +587,32 @@ export default function Home() {
               Technology names
             </span>
             <div className="mx-auto flex max-w-5xl flex-wrap justify-center gap-3">
-              {techEcosystem.map((tech) => (
-                <span
-                  key={tech}
-                  className="cursor-default rounded-md border border-slate-800 bg-slate-900 px-3.5 py-1.5 font-mono text-xs text-slate-300 transition-colors hover:border-slate-700 hover:text-slate-100"
-                >
-                  {tech}
-                </span>
-              ))}
+              {techEcosystem.map((tech) => {
+                const techLinks: Record<string, string> = {
+                  "Linnworks": "/linnworks-consultants",
+                  "Microsoft Dynamics 365 Business Central": "/business-central-integration-uk",
+                };
+                const href = techLinks[tech];
+                if (href) {
+                  return (
+                    <Link
+                      key={tech}
+                      href={href}
+                      className="rounded-md border border-slate-700 bg-slate-900 px-3.5 py-1.5 font-mono text-xs text-brand-cyan transition-colors hover:border-brand-cyan/50 hover:bg-slate-800"
+                    >
+                      {tech}
+                    </Link>
+                  );
+                }
+                return (
+                  <span
+                    key={tech}
+                    className="cursor-default rounded-md border border-slate-800 bg-slate-900 px-3.5 py-1.5 font-mono text-xs text-slate-300 transition-colors hover:border-slate-700 hover:text-slate-100"
+                  >
+                    {tech}
+                  </span>
+                );
+              })}
             </div>
           </div>
         </div>
