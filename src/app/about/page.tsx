@@ -153,7 +153,7 @@ export default function AboutPage() {
             {/* Content */}
             <div className="space-y-4 flex-1">
               <div>
-                <h3 className="text-xl font-bold text-white">Built on Senior Engineering Experience</h3>
+                <h2 className="text-xl font-bold text-white">Built on Senior Engineering Experience</h2>
                 <p className="text-xs text-brand-cyan font-mono tracking-widest uppercase mt-1">Direct, Business-First Delivery</p>
               </div>
 
@@ -191,7 +191,7 @@ export default function AboutPage() {
             {/* Content */}
             <div className="space-y-4 flex-1">
               <div>
-                <h3 className="text-xl font-bold text-white">Riddhi Patel</h3>
+                <h2 className="text-xl font-bold text-white">Riddhi Patel</h2>
                 <p className="text-xs text-brand-cyan font-mono tracking-widest uppercase mt-1">Founder &amp; Director</p>
               </div>
 
@@ -218,7 +218,7 @@ export default function AboutPage() {
         {/* Closing Contact CTA */}
         <div className="mt-20 border-t border-brand-border/40 pt-12 flex flex-col sm:flex-row justify-between items-center gap-6">
           <div className="space-y-1">
-            <h3 className="text-lg font-bold text-slate-100">Ready to discuss a business challenge?</h3>
+            <h2 className="text-lg font-bold text-slate-100">Ready to discuss a business challenge?</h2>
             <p className="text-slate-400 text-xs">Let&apos;s map out a solution to your business systems challenge.</p>
           </div>
           <Link

@@ -261,9 +261,9 @@ export default function Home() {
       <section className="border-y border-brand-border/30 bg-slate-900/20 py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-16 max-w-3xl text-center">
-            <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-brand-indigo">
+            <h2 className="mb-2 block text-2xl font-extrabold tracking-tight text-slate-100 sm:text-3xl">
               Your technology should make business easier.
-            </span>
+            </h2>
             <p className="text-base leading-relaxed text-slate-400">
               Disconnected systems, repetitive manual work and difficult-to-manage technology can slow a business down. VEDATEK simplifies the complexity by connecting systems, automating processes and building technology that works around your business.
             </p>

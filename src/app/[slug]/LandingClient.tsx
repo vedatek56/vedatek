@@ -87,7 +87,7 @@ export default function LandingClient({ data, slug }: LandingClientProps) {
             <div className="w-10 h-10 rounded-xl bg-brand-teal/10 border border-brand-teal/30 flex items-center justify-center text-brand-teal">
               <TrendingUp className="w-5 h-5" />
             </div>
-            <h3 className="text-sm font-bold text-slate-200 tracking-wide uppercase">Typical Business Outcome</h3>
+            <h2 className="text-sm font-bold text-slate-200 tracking-wide uppercase">Typical Business Outcome</h2>
           </div>
           <p className="text-slate-100 text-sm leading-relaxed font-medium pl-2">
             &ldquo;{data.outcome}&rdquo;
@@ -96,7 +96,7 @@ export default function LandingClient({ data, slug }: LandingClientProps) {
 
         {/* Booking CTA Banner */}
         <div className="bg-slate-900/40 border border-brand-border/60 rounded-3xl p-8 sm:p-12 text-center space-y-6">
-          <h3 className="text-2xl font-bold text-slate-100">Let&apos;s map out your systems.</h3>
+          <h2 className="text-2xl font-bold text-slate-100">Let&apos;s map out your systems.</h2>
           <p className="text-slate-400 text-xs leading-relaxed max-w-md mx-auto">
             Book a free, 30-minute operational diagnostic session with a senior VEDATEK engineer to outline your integration blueprint.
           </p>

@@ -102,7 +102,7 @@ export default function CaseStudiesPage() {
                   </div>
                   <div>
                     <span className="text-[10px] font-mono tracking-wider uppercase text-slate-500 block">CLIENT PROFILE</span>
-                    <h3 className="text-slate-200 font-bold text-lg mt-0.5">{item.client}</h3>
+                    <span className="text-slate-200 font-bold text-lg mt-0.5 block">{item.client}</span>
                     <span className="text-xs text-brand-cyan font-mono">{item.sector}</span>
                   </div>
 
@@ -156,7 +156,7 @@ export default function CaseStudiesPage() {
 
         {/* CTA Banner */}
         <div className="mt-20 bg-slate-900/40 border border-brand-border/60 rounded-3xl p-8 sm:p-12 text-center max-w-3xl mx-auto space-y-6">
-          <h3 className="text-2xl font-bold text-slate-100">Plan your project today.</h3>
+          <h2 className="text-2xl font-bold text-slate-100">Plan your project today.</h2>
           <p className="text-slate-400 text-xs leading-relaxed max-w-md mx-auto">
             Book an introductory diagnostic session with an experienced engineer to map out your systems and draft your custom integration strategy.
           </p>
