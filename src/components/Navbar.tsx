@@ -51,7 +51,7 @@ export default function Navbar() {
             <span className="text-xl font-black tracking-wider text-brand-cyan transition-colors duration-200 group-hover:text-brand-indigo">
               TEK
             </span>
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan"></span>
           </Link>
 
           {/* Desktop Navigation */}
