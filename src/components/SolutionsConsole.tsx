@@ -181,7 +181,7 @@ export default function SolutionsConsole() {
       
       {/* Sidebar Selector (5 Cols) */}
       <div className="lg:col-span-4 flex flex-col space-y-2">
-        <p className="text-xs font-bold tracking-wider uppercase text-slate-500 px-3 mb-4">
+        <p className="text-xs font-bold tracking-wider uppercase text-slate-400 px-3 mb-4">
           Select Your Challenge
         </p>
         
@@ -191,6 +191,8 @@ export default function SolutionsConsole() {
           return (
             <button
               key={tab.id}
+              type="button"
+              aria-label={`Select challenge: ${tab.problem}`}
               onClick={() => setActiveTabId(tab.id)}
               className={`flex items-center gap-3.5 px-4 py-4 rounded-2xl text-left border transition-all duration-300 ${
                 isSelected
@@ -198,9 +200,9 @@ export default function SolutionsConsole() {
                   : "bg-transparent border-transparent text-slate-400 hover:text-slate-200 hover:bg-slate-950/30"
               }`}
             >
-              <TabIcon className={`w-5 h-5 shrink-0 ${isSelected ? "text-brand-cyan animate-pulse" : "text-slate-500"}`} />
+              <TabIcon className={`w-5 h-5 shrink-0 ${isSelected ? "text-brand-cyan animate-pulse" : "text-slate-400"}`} />
               <div className="flex flex-col">
-                <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
                   {tab.id.replace("-", " ")}
                 </span>
                 <span className="text-sm font-extrabold tracking-tight">

@@ -175,6 +175,7 @@ export default function LeadMagnet() {
 
                 <button
                   type="submit"
+                  aria-label="Download Diagnostic Guide PDF"
                   disabled={status === "submitting"}
                   className="w-full flex items-center justify-center gap-1.5 bg-gradient-to-r from-brand-indigo to-brand-cyan hover:from-brand-indigo/90 hover:to-brand-cyan/90 disabled:from-slate-800 disabled:to-slate-800 text-slate-950 disabled:text-slate-500 font-bold py-3 px-4 rounded-xl text-xs uppercase tracking-wider transition-all"
                 >

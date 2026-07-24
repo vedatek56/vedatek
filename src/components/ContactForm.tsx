@@ -141,6 +141,8 @@ export default function ContactForm() {
               Thank you for reaching out. We have received your inquiry and a senior engineer will review it shortly. We aim to respond within one business day.
             </p>
             <button
+              type="button"
+              aria-label="Send another message"
               onClick={() => setStatus("idle")}
               className="mt-8 text-xs font-semibold uppercase tracking-wider text-brand-cyan hover:text-white border-b border-brand-cyan/35 hover:border-white transition-all pb-1 focus:outline-none"
             >
@@ -310,9 +312,10 @@ export default function ContactForm() {
             {/* Submit Button */}
             <button
               type="submit"
+              aria-label="Send Inquiry Form"
               disabled={status === "submitting"}
-            className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-brand-indigo to-brand-cyan hover:from-brand-indigo/90 hover:to-brand-cyan/90 text-slate-950 font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-brand-indigo/10 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed focus:outline-none"
-          >
+              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-brand-indigo to-brand-cyan hover:from-brand-indigo/90 hover:to-brand-cyan/90 text-slate-950 font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-brand-indigo/10 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed focus:outline-none"
+            >
             {status === "submitting" ? (
               <>
                 <Loader2 className="w-5 h-5 animate-spin" />
