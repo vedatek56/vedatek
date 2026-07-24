@@ -187,14 +187,14 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <section className="relative overflow-hidden bg-slate-950 pb-20 pt-20 md:pb-24 md:pt-28 lg:pb-28 lg:pt-36">
+      <section className="relative overflow-hidden bg-slate-950 pb-16 pt-12 sm:pb-20 sm:pt-20 md:pb-24 md:pt-28 lg:pb-28 lg:pt-36">
         <div className="pointer-events-none absolute left-0 right-0 top-0 h-[500px] bg-gradient-to-b from-brand-indigo/10 via-transparent to-transparent" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
             <div className="flex flex-col space-y-6 text-left lg:col-span-6">
               <div>
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-cyan/20 bg-brand-cyan/10 px-3 py-1 text-xs font-semibold tracking-wider text-brand-cyan">
-                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-brand-cyan" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
                   UK Technology Consultancy
                 </span>
               </div>
