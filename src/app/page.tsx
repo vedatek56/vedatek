@@ -385,6 +385,7 @@ export default function Home() {
                   <div className="mt-6 border-t border-brand-border/30 pt-6">
                     <Link
                       href={`/services/${service.slug}`}
+                      aria-label={`Learn more about ${service.title}`}
                       className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-brand-cyan transition-colors hover:text-white"
                     >
                       Learn more <ArrowRight className="h-3.5 w-3.5" />
