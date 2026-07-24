@@ -13,10 +13,11 @@ export default function Footer() {
   };
 
   const serviceLinks = [
-    { name: "AI & Automation", href: "/services/ai-automation" },
-    { name: "Software Development", href: "/services/software-development" },
+    { name: "Linnworks Consultants UK", href: "/linnworks-consultants" },
     { name: "Systems Integration", href: "/services/systems-integration" },
     { name: "EDI & Automation", href: "/services/edi-automation" },
+    { name: "AI & Automation", href: "/services/ai-automation" },
+    { name: "Software Development", href: "/services/software-development" },
     { name: "Cloud & DevOps", href: "/services/cloud-devops" }
   ];
 
