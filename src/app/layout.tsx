@@ -126,13 +126,12 @@ export default function RootLayout({
       <head>
         <meta
           httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://snap.licdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vedatek.co.uk https://www.google-analytics.com https://px.ads.linkedin.com https://snap.licdn.com; font-src 'self' data:; connect-src 'self' https://api.web3forms.com https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://px.ads.linkedin.com https://snap.licdn.com; frame-src 'self' https://snap.licdn.com https://www.linkedin.com; worker-src 'self' blob:;"
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.google-analytics.com https://snap.licdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vedatek.co.uk https://*.google-analytics.com https://px.ads.linkedin.com https://snap.licdn.com; font-src 'self' data:; connect-src 'self' https://api.web3forms.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://px.ads.linkedin.com https://snap.licdn.com; frame-src 'self' https://snap.licdn.com https://www.linkedin.com; worker-src 'self' blob:;"
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
-        <link rel="preconnect" href="https://snap.licdn.com" />
       </head>
       <body className="min-h-full flex flex-col bg-brand-dark text-slate-100 selection:bg-brand-indigo/35 selection:text-white">
         <script
@@ -152,19 +151,22 @@ export default function RootLayout({
             gtag('config', 'G-8JP7NQGCBC');
           `}
         </Script>
-        {/* LinkedIn Insight Tag */}
-        <Script id="linkedin-insight-init" strategy="lazyOnload">
+        {/* LinkedIn Insight Tag - Deferred post interaction */}
+        <Script id="linkedin-insight-deferred" strategy="lazyOnload">
           {`
-            _linkedin_partner_id = "547254352";
-            window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-            window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+            setTimeout(function() {
+              window._linkedin_partner_id = "547254352";
+              window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+              window._linkedin_data_partner_ids.push(window._linkedin_partner_id);
+              var s = document.getElementsByTagName("script")[0];
+              var b = document.createElement("script");
+              b.type = "text/javascript";
+              b.async = true;
+              b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+              s.parentNode.insertBefore(b, s);
+            }, 3500);
           `}
         </Script>
-        <Script
-          id="linkedin-insight-tag"
-          src="https://snap.licdn.com/li.lms-analytics/insight.min.js"
-          strategy="lazyOnload"
-        />
         <Navbar />
         <main className="flex-grow pt-16">
           {children}
