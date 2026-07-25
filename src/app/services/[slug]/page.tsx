@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Brain, Code2, Network, RefreshCw, CloudLightning, Activity, ShieldCheck, Compass, ArrowLeft, CheckCircle2, ChevronRight, MessageSquare } from "lucide-react";
 import { services } from "@/data/services";
+import LeadMagnet from "@/components/LeadMagnet";
 
 const IconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Brain,
@@ -253,6 +254,9 @@ export default async function ServiceDetailPage({
           </div>
 
         </div>
+
+        {/* Lead Magnet Download */}
+        <LeadMagnet />
 
         {/* Consulting Banner CTA */}
         <div className="bg-gradient-to-r from-brand-indigo/10 via-brand-cyan/5 to-slate-900 border border-brand-border/60 rounded-3xl p-8 sm:p-12 relative overflow-hidden flex flex-col md:flex-row gap-8 justify-between items-center">

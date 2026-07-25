@@ -62,6 +62,7 @@ export const services: Service[] = [
       "Node.js",
       "Python",
       "PostgreSQL",
+      "Apache Cassandra / NoSQL",
       "Redis",
       "REST APIs",
       "GraphQL"
@@ -94,6 +95,8 @@ export const services: Service[] = [
       "Dynamics 365 Business Central",
       "Linnworks",
       "Shopify",
+      "Magento / Adobe Commerce",
+      "SAP ERP Integration",
       "REST APIs",
       "Webhooks",
       "SFTP",
@@ -162,6 +165,9 @@ export const services: Service[] = [
     ],
     technologies: [
       "AWS",
+      "Microsoft Azure",
+      "Google Cloud Platform (GCP)",
+      "Azure DevOps",
       "Terraform",
       "Kubernetes",
       "Docker",
