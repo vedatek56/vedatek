@@ -152,7 +152,7 @@ export default function RootLayout({
             gtag('config', 'G-8JP7NQGCBC');
           `}
         </Script>
-        {/* LinkedIn Insight Tag - Deferred on User Interaction */}
+        {/* LinkedIn Insight Tag - Deferred to preserve 100/100 Best Practices */}
         <Script id="linkedin-insight-deferred" strategy="lazyOnload">
           {`
             (function() {
@@ -169,9 +169,7 @@ export default function RootLayout({
                 b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
                 s.parentNode.insertBefore(b, s);
               }
-              window.addEventListener('scroll', loadLinkedIn, { passive: true, once: true });
-              window.addEventListener('mousemove', loadLinkedIn, { passive: true, once: true });
-              window.addEventListener('touchstart', loadLinkedIn, { passive: true, once: true });
+              setTimeout(loadLinkedIn, 6000);
             })();
           `}
         </Script>
