@@ -126,7 +126,7 @@ export default function RootLayout({
       <head>
         <meta
           httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://snap.licdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vedatek.co.uk https://www.google-analytics.com https://px.ads.linkedin.com https://snap.licdn.com; font-src 'self' data:; connect-src 'self' https://api.web3forms.com https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://px.ads.linkedin.com https://snap.licdn.com;"
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://snap.licdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vedatek.co.uk https://www.google-analytics.com https://px.ads.linkedin.com https://snap.licdn.com; font-src 'self' data:; connect-src 'self' https://api.web3forms.com https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://px.ads.linkedin.com https://snap.licdn.com; frame-src 'self' https://snap.licdn.com https://www.linkedin.com; worker-src 'self' blob:;"
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
