@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle2, ArrowRight, MessageSquare } from "lucide-react";
+import LeadMagnet from "@/components/LeadMagnet";
 
 export const metadata: Metadata = {
   title: "Linnworks Consultants UK | Linnworks Integration Specialists | VEDATEK",
@@ -323,6 +324,9 @@ export default function LinnworksConsultantsPage() {
             ))}
           </div>
         </section>
+
+        {/* Lead Magnet Download */}
+        <LeadMagnet />
 
         {/* CTA */}
         <section className="bg-slate-900/40 border border-brand-border/60 rounded-3xl p-8 sm:p-12 text-center space-y-6">

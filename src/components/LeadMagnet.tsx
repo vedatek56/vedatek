@@ -120,11 +120,11 @@ export default function LeadMagnet() {
                 <div className="w-10 h-10 bg-brand-teal/10 border border-brand-teal/30 rounded-full flex items-center justify-center mx-auto text-brand-teal">
                   <CheckCircle2 className="w-5 h-5" />
                 </div>
-                <h4 className="text-sm font-bold text-slate-200">Download Started!</h4>
-                <p className="text-[11px] text-slate-400 font-light leading-relaxed">
+                <p className="text-sm font-bold text-slate-200">Download Started!</p>
+                <p className="text-xs text-slate-300 font-light leading-relaxed">
                   Your PDF guide is downloading. If it didn&apos;t start automatically,{" "}
                   <a href="/downloads/vedatek-integration-mistakes.pdf" download className="text-brand-cyan font-semibold hover:underline">
-                    click here to download manually
+                    download the Systems Integration Mistakes Guide (PDF)
                   </a>.
                 </p>
               </motion.div>
@@ -137,14 +137,17 @@ export default function LeadMagnet() {
                 className="space-y-4"
               >
                 <div className="space-y-1.5">
-                  <label className="text-[9px] font-mono tracking-wider uppercase text-slate-400 font-bold block">First Name</label>
+                  <label htmlFor="lead-magnet-name" className="text-[10px] font-mono tracking-wider uppercase text-slate-300 font-bold block">First Name</label>
                   <input
                     type="text"
+                    id="lead-magnet-name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="e.g. Sarah"
-                    className={`w-full bg-slate-950/80 border rounded-xl px-3.5 py-2.5 text-xs text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-brand-cyan ${
+                    required
+                    aria-label="First Name"
+                    className={`w-full bg-slate-950/80 border rounded-xl px-3.5 py-2.5 text-xs text-slate-200 placeholder:text-slate-500 focus:outline-none focus:border-brand-cyan ${
                       errors.name ? "border-red-500/80" : "border-brand-border/40"
                     }`}
                   />
@@ -152,14 +155,17 @@ export default function LeadMagnet() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-[9px] font-mono tracking-wider uppercase text-slate-400 font-bold block">Work Email</label>
+                  <label htmlFor="lead-magnet-email" className="text-[10px] font-mono tracking-wider uppercase text-slate-300 font-bold block">Work Email</label>
                   <input
                     type="email"
+                    id="lead-magnet-email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="e.g. sarah@company.com"
-                    className={`w-full bg-slate-950/80 border rounded-xl px-3.5 py-2.5 text-xs text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-brand-cyan ${
+                    required
+                    aria-label="Work Email"
+                    className={`w-full bg-slate-950/80 border rounded-xl px-3.5 py-2.5 text-xs text-slate-200 placeholder:text-slate-500 focus:outline-none focus:border-brand-cyan ${
                       errors.email ? "border-red-500/80" : "border-brand-border/40"
                     }`}
                   />
@@ -175,7 +181,7 @@ export default function LeadMagnet() {
 
                 <button
                   type="submit"
-                  aria-label="Download Diagnostic Guide PDF"
+                  aria-label="Download Systems Integration Mistakes Guide PDF"
                   disabled={status === "submitting"}
                   className="w-full flex items-center justify-center gap-1.5 bg-gradient-to-r from-brand-indigo to-brand-cyan hover:from-brand-indigo/90 hover:to-brand-cyan/90 disabled:from-slate-800 disabled:to-slate-800 text-slate-950 disabled:text-slate-500 font-bold py-3 px-4 rounded-xl text-xs uppercase tracking-wider transition-all"
                 >
