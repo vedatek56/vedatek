@@ -28,3 +28,38 @@ Whenever creating or modifying pages, components, or styles in this repository, 
 ### 4. Build & Environment Optimization
 - Maintain modern `browserslist` target in `package.json` to eliminate legacy polyfills (`Array.prototype.flat`, `Object.hasOwn`).
 - Preserve static asset long-term immutable caching rules in `public/_headers`.
+
+---
+
+# 🤖 Agentic Systems & Graph Engineering Rules (Andrew Ng & Anthropic Playbook)
+
+Whenever designing, building, or modifying AI agents, LLM workflows, or multi-agent architectures, strictly enforce the following design principles:
+
+### 1. Architecture Over Model (GPT-3.5 Agentic > GPT-4 Zero-Shot)
+- **Workflow First**: Invest in workflow architecture and iterative loops rather than relying solely on stronger foundation models. Compound workflows (55% → 72% → 84% → 88% → 95%) deliver far greater reliability than zero-shot direct prompts.
+- **Fast Tokens as Multiplier**: Prioritize fast token generation (e.g. smaller/faster models for loops, extraction, and routing) to allow more iterations and workers within the same latency/cost budget.
+
+### 2. Staged Build Path & Decision Rules
+- **Rule 1: Start with the Cheapest Pattern**: Always begin with the minimal reliable pattern (Zero-Shot → Reflection → Tool Use → Planning → Multi-Agent → Graph Architecture). Earn the right to add complexity only when measured failure demands it.
+- **Rule 2: Measure Before Promoting**: Establish a baseline before promoting to the next pattern. If baseline failure rate is <5%, pattern complexity cost likely exceeds benefit.
+- **Rule 3: Match Control to Risk**: High-stakes tasks (finance, security, data modification) MUST use deterministic chains/evaluation gates with explicit schemas. Low-stakes tasks (brainstorming, drafting) can leverage autonomous planning/multi-agent exploration.
+- **Rule 4: Count Tokens, Not Agents**: Cost scales with tokens consumed, not conceptual agent count. Design for token efficiency with bounded intermediate outputs.
+- **Rule 5: The Graph Earns Itself**: Introduce persistent Knowledge Graphs (Neo4j / ADK) when state must persist across sessions, or when multiple agents query/update shared entities and relationships.
+
+### 3. Core Agent Design Patterns
+- **Reflection / Evaluator-Optimizer**: Separate generator from critic. Always enforce explicit rubrics, cap maximum revision iterations, cite line-level evidence, and log intermediate artifacts (draft, critique, revision).
+- **Tool Use**: Enforce strict, validated JSON tool schemas. Separate read-only permissions from write-access. Implement explicit rate-limiting and fallback handlers (e.g., pivot search tools upon API limits).
+- **Planning**: Generate structured JSON plans. Preserve successful intermediate work across replans ("preserve successful work across replans"). Bound step counts and define explicit human escalation thresholds.
+- **Multi-Agent Collaboration**: Use role-specialized prompts with distinct rubrics (e.g. Coder vs Security Auditor vs Tester). Require agents to communicate via typed artifact contracts and bounded summaries (e.g. 200 tokens), NOT raw full transcripts.
+- **Prompt Chaining**: Use fixed sequences with programmatic gate checks between stages to catch malformed inputs early.
+- **Routing**: Use fast, lightweight models to classify and route queries to specialized sub-agents.
+- **Graph Architecture**: Externalize shared state into a durable knowledge graph (Entities, Claims, Sources, Artifacts, Runs with typed edges `mentions`, `supports`, `contradicts`, `derived_from`, `supersedes`). Track full provenance and versioning.
+
+### 4. Anti-Patterns to Strictly Avoid
+- 🚫 **The Everything-Agent**: Never build a single monolith agent with dozens of tools and a bloated prompt.
+- 🚫 **The Echo Chamber**: Avoid running identical prompts across agents expecting diversity; use distinct rubrics/prompts.
+- 🚫 **The Infinite Loop**: Never create reflection/planning loops without strict iteration caps and stopping criteria.
+- 🚫 **The Phantom Graph**: Never build graph infrastructure/ontologies that agents do not actively query.
+- 🚫 **Conversational Bottlenecks**: Never feed un-summarized worker transcripts back into orchestrators.
+- 🚫 **The Premature Agent**: Never over-engineer simple tasks into multi-agent systems without proving zero-shot/single-loop failure first.
+
