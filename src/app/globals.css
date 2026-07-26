@@ -31,12 +31,12 @@
 
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   --animate-flow: flow 15s linear infinite;
-  --animate-marquee: marquee 26s linear infinite;
+  --animate-marquee: marquee 50s linear infinite;
 }
 
 @media (max-width: 768px) {
   :root {
-    --animate-marquee: marquee 22s linear infinite;
+    --animate-marquee: marquee 40s linear infinite;
   }
 }
 
