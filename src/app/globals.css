@@ -31,7 +31,13 @@
 
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   --animate-flow: flow 15s linear infinite;
-  --animate-marquee: marquee 25s linear infinite;
+  --animate-marquee: marquee 14s linear infinite;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --animate-marquee: marquee 11s linear infinite;
+  }
 }
 
 @keyframes flow {
@@ -45,10 +51,10 @@
 
 @keyframes marquee {
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
