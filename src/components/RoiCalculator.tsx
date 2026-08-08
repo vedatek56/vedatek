@@ -7,11 +7,6 @@ import Link from 'next/link';
 
 export default function RoiCalculator() {
   const [ordersPerMonth, setOrdersPerMonth] = useState(1000);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // Calculations
   const manualMinutesPerOrder = 3;
@@ -35,8 +30,6 @@ export default function RoiCalculator() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
   };
-
-  if (!mounted) return null;
 
   return (
     <section className="py-24 relative overflow-hidden">
