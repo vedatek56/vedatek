@@ -21,6 +21,7 @@ import { motion } from "framer-motion";
 import HeroVisual from "@/components/HeroVisual";
 import IntegrationVisual from "@/components/IntegrationVisual";
 import PartnerMarquee from "@/components/PartnerMarquee";
+import RoiCalculator from "@/components/RoiCalculator";
 import SolutionsConsole from "@/components/SolutionsConsole";
 import { services } from "@/data/services";
 import { homepageFaqs } from "@/data/seo";
@@ -236,6 +237,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ROI Calculator Section */}
+      <RoiCalculator />
 
       <section className="border-y border-brand-border/30 bg-slate-900/10 py-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
