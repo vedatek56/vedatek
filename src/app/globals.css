@@ -135,3 +135,67 @@ h1, h2, h3, h4, h5, h6 {
 .transition-all-300 {
   transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* ==========================================================================
+   AstroReply Scoped Theme & Cosmic Accents
+   ========================================================================== */
+.astro-theme {
+  --background: #08090e;
+  --foreground: #f8fafc;
+  background-color: #08090e !important;
+  color: #f8fafc !important;
+}
+
+.astro-theme h1, 
+.astro-theme h2, 
+.astro-theme h3, 
+.astro-theme h4, 
+.astro-theme h5, 
+.astro-theme h6 {
+  color: #f8fafc !important;
+}
+
+.astro-theme .astro-card {
+  background-color: rgba(14, 17, 27, 0.75) !important;
+  border-color: rgba(251, 191, 36, 0.15) !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7), 0 0 25px -5px rgba(129, 140, 248, 0.12) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.astro-theme .astro-card:hover {
+  background-color: rgba(20, 25, 40, 0.9) !important;
+  border-color: rgba(251, 191, 36, 0.45) !important;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 30px 2px rgba(251, 191, 36, 0.2) !important;
+  transform: translateY(-2px) !important;
+}
+
+.astro-theme .astro-glass {
+  background-color: rgba(12, 15, 25, 0.65) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.astro-theme .astro-gold-gradient {
+  background: linear-gradient(135deg, #fef08a 0%, #fbbf24 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.astro-theme .astro-cosmic-gradient {
+  background: linear-gradient(135deg, #e0e7ff 0%, #a5b4fc 40%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.astro-theme .astro-radial-bg {
+  background: radial-gradient(circle at 50% 0%, rgba(129, 140, 248, 0.15) 0%, rgba(251, 191, 36, 0.05) 35%, transparent 70%),
+              radial-gradient(circle at 100% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 0% 80%, rgba(251, 191, 36, 0.08) 0%, transparent 50%),
+              #08090e;
+}
+

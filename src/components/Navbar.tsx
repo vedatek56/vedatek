@@ -24,6 +24,11 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Hide VedaTek navbar on AstroReply pages
+  if (pathname?.startsWith("/astroreply")) {
+    return null;
+  }
+
 
   const navLinks = [
     { name: "Home", href: "/" },

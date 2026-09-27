@@ -1,8 +1,17 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
+  const pathname = usePathname();
   const currentYear = new Date().getFullYear();
+
+  // Hide VedaTek footer on AstroReply pages
+  if (pathname?.startsWith("/astroreply")) {
+    return null;
+  }
 
   // Mock contact details, easily configurable
   const contactDetails = {
