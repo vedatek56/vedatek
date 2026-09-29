@@ -1,3 +1,15 @@
+
+/* Ensure root body and html are dark with no white header padding on AstroReply */
+html:has(.astro-theme),
+body:has(.astro-theme) {
+  background-color: #080b18 !important;
+  color: #ffffff !important;
+}
+
+body:has(.astro-theme) main {
+  padding-top: 0 !important;
+}
+
 @import "tailwindcss";
 
 :root {

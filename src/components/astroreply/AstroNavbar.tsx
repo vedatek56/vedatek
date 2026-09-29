@@ -29,8 +29,8 @@ export default function AstroNavbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#080a12]/90 backdrop-blur-xl border-b border-amber-400/20 py-3 shadow-2xl shadow-black/80"
-          : "bg-transparent py-5"
+          ? "bg-[#080b18]/95 backdrop-blur-2xl border-b border-amber-400/30 py-3 shadow-2xl shadow-black/80"
+          : "bg-[#080b18]/85 backdrop-blur-xl border-b border-amber-400/20 py-4 shadow-xl shadow-black/50"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,7 +48,7 @@ export default function AstroNavbar() {
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="text-xl font-black tracking-tight text-white drop-shadow-sm">
+                <span className="text-2xl font-black tracking-tight text-white drop-shadow-md">
                   Astro<span className="text-amber-400">Reply</span>
                 </span>
                 <span className="text-[10px] font-extrabold tracking-widest uppercase px-1.5 py-0.5 rounded bg-amber-400/20 text-amber-300 border border-amber-400/40">
