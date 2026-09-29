@@ -66,28 +66,33 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Global Heading Overrides to Enforce Dynamic Light/Dark Contrast */
-h1, h2, h3, h4, h5, h6 {
+/* Global Heading Overrides to Enforce Dynamic Light/Dark Contrast on VedaTek Main Site */
+body:not(:has(.astro-theme)) h1, 
+body:not(:has(.astro-theme)) h2, 
+body:not(:has(.astro-theme)) h3, 
+body:not(:has(.astro-theme)) h4, 
+body:not(:has(.astro-theme)) h5, 
+body:not(:has(.astro-theme)) h6 {
   color: var(--foreground) !important;
 }
 
-/* Global Hover overrides to prevent hardcoded white text contrast issues */
-.hover\:text-white:hover {
+/* Global Hover overrides to prevent hardcoded white text contrast issues on VedaTek Main Site */
+body:not(:has(.astro-theme)) .hover\:text-white:hover {
   color: var(--foreground) !important;
 }
-.group:hover .group-hover\:text-white {
+body:not(:has(.astro-theme)) .group:hover .group-hover\:text-white {
   color: var(--foreground) !important;
 }
-.hover\:border-white:hover {
+body:not(:has(.astro-theme)) .hover\:border-white:hover {
   border-color: var(--foreground) !important;
 }
 
-/* Global Card Styling overrides for high contrast defined boundaries */
-.bg-slate-900\/10, 
-.bg-slate-950\/40, 
-.bg-slate-900\/20, 
-.bg-slate-950\/30,
-.glass-card {
+/* Global Card Styling overrides for high contrast defined boundaries on VedaTek Main Site */
+body:not(:has(.astro-theme)) .bg-slate-900\/10, 
+body:not(:has(.astro-theme)) .bg-slate-950\/40, 
+body:not(:has(.astro-theme)) .bg-slate-900\/20, 
+body:not(:has(.astro-theme)) .bg-slate-950\/30,
+body:not(:has(.astro-theme)) .glass-card {
   background-color: #ffffff !important;
   border-color: #cbd5e1 !important; /* solid slate-300 border for clean outlines */
   border-width: 1px !important;
@@ -96,12 +101,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-/* Hover effects for all cards */
-.bg-slate-900\/10:hover, 
-.bg-slate-950\/40:hover, 
-.bg-slate-900\/20:hover, 
-.bg-slate-950\/30:hover,
-.glass-card:hover {
+/* Hover effects for all cards on VedaTek Main Site */
+body:not(:has(.astro-theme)) .bg-slate-900\/10:hover, 
+body:not(:has(.astro-theme)) .bg-slate-950\/40:hover, 
+body:not(:has(.astro-theme)) .bg-slate-900\/20:hover, 
+body:not(:has(.astro-theme)) .bg-slate-950\/30:hover,
+body:not(:has(.astro-theme)) .glass-card:hover {
   background-color: #ffffff !important;
   border-color: #4f46e5 !important; /* glow to brand-indigo */
   box-shadow: 0 12px 24px -10px rgba(79, 70, 229, 0.12), 0 0 15px -2px rgba(79, 70, 229, 0.06) !important;
