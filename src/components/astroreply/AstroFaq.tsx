@@ -34,20 +34,20 @@ export default function AstroFaq() {
   ];
 
   return (
-    <section id="faq" className="relative py-24 border-t border-slate-800/80 bg-[#06080d]">
+    <section id="faq" className="relative py-24 border-t border-white/10 bg-[#06070d]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Section Header */}
         <div className="text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-indigo-400/30 bg-indigo-400/10 text-indigo-300 text-xs font-semibold uppercase tracking-wider">
-            <HelpCircle className="w-3.5 h-3.5 text-indigo-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-indigo-400/40 bg-indigo-400/15 text-indigo-300 text-xs font-bold uppercase tracking-wider">
+            <HelpCircle className="w-4 h-4 text-indigo-400" />
             Frequently Asked Questions
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight drop-shadow-sm">
             Everything you need to know about <br />
             <span className="astro-gold-gradient">AstroReply.</span>
           </h2>
-          <p className="text-base text-slate-300">
+          <p className="text-base text-[#cbd5e1] font-normal">
             Have questions about precision calculations, data safety, or subscriptions?
           </p>
         </div>
@@ -59,16 +59,16 @@ export default function AstroFaq() {
             return (
               <div
                 key={faq.question}
-                className="astro-card rounded-2xl overflow-hidden border border-slate-800 transition-colors"
+                className="rounded-3xl overflow-hidden border border-white/10 bg-[#11152a] transition-colors shadow-lg"
               >
                 <button
                   type="button"
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
                   aria-expanded={isOpen}
                   aria-label={`Toggle answer for: ${faq.question}`}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none"
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none hover:bg-[#161c36] transition-colors"
                 >
-                  <h3 className="text-sm sm:text-base font-bold text-white flex items-center gap-2.5">
+                  <h3 className="text-sm sm:text-base font-bold text-white flex items-center gap-3">
                     <Sparkles className="w-4 h-4 text-amber-400 shrink-0" />
                     {faq.question}
                   </h3>
@@ -79,7 +79,7 @@ export default function AstroFaq() {
                   />
                 </button>
                 {isOpen && (
-                  <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-4">
+                  <div className="px-6 pb-6 text-xs sm:text-sm text-[#e2e8f0] leading-relaxed border-t border-white/10 pt-4 font-normal">
                     {faq.answer}
                   </div>
                 )}

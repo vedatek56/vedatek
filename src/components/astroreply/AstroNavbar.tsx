@@ -29,7 +29,7 @@ export default function AstroNavbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#08090e]/85 backdrop-blur-xl border-b border-amber-500/20 py-3 shadow-2xl shadow-black/60"
+          ? "bg-[#080a12]/90 backdrop-blur-xl border-b border-amber-400/20 py-3 shadow-2xl shadow-black/80"
           : "bg-transparent py-5"
       }`}
     >
@@ -41,21 +41,21 @@ export default function AstroNavbar() {
             aria-label="AstroReply Homepage"
             className="flex items-center gap-3 group focus:outline-none"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 via-indigo-500 to-indigo-900 p-[1px] shadow-lg shadow-amber-400/15 group-hover:shadow-amber-400/30 transition-all duration-300">
-              <div className="w-full h-full bg-[#0d101a] rounded-[11px] flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 via-amber-500 to-indigo-600 p-[1.5px] shadow-lg shadow-amber-400/20 group-hover:shadow-amber-400/40 transition-all duration-300">
+              <div className="w-full h-full bg-[#0d1122] rounded-[10px] flex items-center justify-center">
                 <Sparkles className="w-5 h-5 text-amber-400 group-hover:rotate-12 transition-transform duration-300" />
               </div>
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="text-xl font-bold tracking-tight text-white">
+                <span className="text-xl font-black tracking-tight text-white drop-shadow-sm">
                   Astro<span className="text-amber-400">Reply</span>
                 </span>
-                <span className="text-[10px] font-bold tracking-widest uppercase px-1.5 py-0.5 rounded bg-amber-400/10 text-amber-300 border border-amber-400/30">
+                <span className="text-[10px] font-extrabold tracking-widest uppercase px-1.5 py-0.5 rounded bg-amber-400/20 text-amber-300 border border-amber-400/40">
                   AI
                 </span>
               </div>
-              <span className="text-[10px] text-indigo-200/70 tracking-wider block font-medium">
+              <span className="text-[11px] text-indigo-300/90 tracking-wider block font-semibold">
                 by VedaTek
               </span>
             </div>
@@ -67,7 +67,7 @@ export default function AstroNavbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-slate-300 hover:text-amber-300 transition-colors duration-200 focus:outline-none"
+                className="text-sm font-semibold text-slate-200 hover:text-amber-400 transition-colors duration-200 focus:outline-none"
               >
                 {link.name}
               </a>
@@ -78,14 +78,14 @@ export default function AstroNavbar() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/astroreply/privacy"
-              className="text-xs text-slate-300 hover:text-slate-100 flex items-center gap-1.5 px-3 py-2 rounded-lg border border-slate-700/60 hover:border-amber-400/40 bg-slate-900/40 transition-all"
+              className="text-xs font-semibold text-slate-200 hover:text-white flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl border border-white/10 hover:border-amber-400/50 bg-[#12162a]/80 hover:bg-[#181e38] transition-all shadow-sm"
             >
-              <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
               Privacy & Trust
             </Link>
             <a
               href="#pricing"
-              className="group flex items-center gap-2 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 text-slate-950 text-xs font-bold uppercase tracking-wider py-2.5 px-5 rounded-full shadow-lg shadow-amber-500/20 hover:shadow-amber-500/35 transition-all duration-300 focus:outline-none"
+              className="group flex items-center gap-2 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 text-slate-950 text-xs font-extrabold uppercase tracking-wider py-2.5 px-5 rounded-full shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all duration-300 focus:outline-none"
             >
               Get AstroReply
               <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -97,7 +97,7 @@ export default function AstroNavbar() {
             <button
               type="button"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-200 hover:text-amber-400 p-2 rounded-lg border border-slate-800 bg-slate-900/60 focus:outline-none"
+              className="text-slate-100 hover:text-amber-400 p-2 rounded-xl border border-white/10 bg-[#12162a] focus:outline-none"
               aria-label="Toggle navigation menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -114,7 +114,7 @@ export default function AstroNavbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="md:hidden bg-[#08090e]/95 border-b border-amber-500/20 backdrop-blur-2xl overflow-hidden"
+            className="md:hidden bg-[#080a14]/98 border-b border-amber-500/20 backdrop-blur-2xl overflow-hidden"
           >
             <div className="px-4 pt-4 pb-6 space-y-3">
               {navLinks.map((link) => (
@@ -122,18 +122,18 @@ export default function AstroNavbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:text-amber-300 hover:bg-slate-900/60 transition-colors"
+                  className="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-200 hover:text-amber-300 hover:bg-[#12162a] transition-colors"
                 >
                   {link.name}
                 </a>
               ))}
-              <div className="pt-3 border-t border-slate-800/80 flex flex-col gap-2.5">
+              <div className="pt-3 border-t border-white/10 flex flex-col gap-2.5">
                 <Link
                   href="/astroreply/privacy"
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-xs font-semibold text-slate-300 border border-slate-700/60 bg-slate-900/50"
+                  className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-xs font-semibold text-slate-200 border border-white/10 bg-[#12162a]"
                 >
-                  <ShieldCheck className="w-4 h-4 text-amber-400" />
+                  <ShieldCheck className="w-4 h-4 text-emerald-400" />
                   Privacy & Store Compliance
                 </Link>
                 <a
