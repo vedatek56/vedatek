@@ -67,7 +67,7 @@ export default function AstroNavbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-semibold text-slate-200 hover:text-amber-400 transition-colors duration-200 focus:outline-none"
+                className="text-sm font-bold text-white hover:text-amber-300 drop-shadow-sm transition-colors duration-200 focus:outline-none"
               >
                 {link.name}
               </a>
@@ -78,7 +78,7 @@ export default function AstroNavbar() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/astroreply/privacy"
-              className="text-xs font-semibold text-slate-200 hover:text-white flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl border border-white/10 hover:border-amber-400/50 bg-[#12162a]/80 hover:bg-[#181e38] transition-all shadow-sm"
+              className="text-xs font-bold text-white hover:text-amber-300 flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl border border-amber-400/30 hover:border-amber-400/70 bg-[#172146]/90 hover:bg-[#1e2a58] shadow-md shadow-indigo-950/50 transition-all shadow-sm"
             >
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
               Privacy & Trust
@@ -97,7 +97,7 @@ export default function AstroNavbar() {
             <button
               type="button"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-100 hover:text-amber-400 p-2 rounded-xl border border-white/10 bg-[#12162a] focus:outline-none"
+              className="text-slate-100 hover:text-amber-400 p-2 rounded-xl border border-white/20 bg-[#141b3a] focus:outline-none"
               aria-label="Toggle navigation menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -122,16 +122,16 @@ export default function AstroNavbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-200 hover:text-amber-300 hover:bg-[#12162a] transition-colors"
+                  className="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-200 hover:text-amber-300 hover:bg-[#141b3a] transition-colors"
                 >
                   {link.name}
                 </a>
               ))}
-              <div className="pt-3 border-t border-white/10 flex flex-col gap-2.5">
+              <div className="pt-3 border-t border-white/20 flex flex-col gap-2.5">
                 <Link
                   href="/astroreply/privacy"
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-xs font-semibold text-slate-200 border border-white/10 bg-[#12162a]"
+                  className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-xs font-semibold text-slate-200 border border-white/20 bg-[#141b3a]"
                 >
                   <ShieldCheck className="w-4 h-4 text-emerald-400" />
                   Privacy & Store Compliance

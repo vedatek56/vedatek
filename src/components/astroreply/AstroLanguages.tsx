@@ -55,7 +55,7 @@ export default function AstroLanguages() {
   const [activeLang, setActiveLang] = useState(languages[0]);
 
   return (
-    <section id="languages" className="relative py-24 border-t border-white/10 bg-[#06070d]">
+    <section id="languages" className="relative py-24 border-t border-white/20 bg-[#06070d]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         
         {/* Section Header */}
@@ -86,7 +86,7 @@ export default function AstroLanguages() {
                 className={`flex items-center gap-3 px-6 py-3.5 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-300 ${
                   isSelected
                     ? "bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 shadow-xl shadow-amber-500/30 scale-105"
-                    : "bg-[#11152a] border border-white/15 text-slate-200 hover:text-white hover:border-amber-400/50"
+                    : "bg-[#11152a] border border-white/25 text-slate-200 hover:text-white hover:border-amber-400/50"
                 }`}
               >
                 <span className="text-lg">{lang.flag}</span>
@@ -100,7 +100,7 @@ export default function AstroLanguages() {
         {/* Live Conversation Showcase Card */}
         <div className="max-w-3xl mx-auto rounded-3xl p-6 sm:p-8 space-y-6 bg-[#11162e] border-2 border-amber-400/30 shadow-2xl shadow-black/80 relative overflow-hidden">
           {/* Top Accent */}
-          <div className="flex items-center justify-between border-b border-white/10 pb-4">
+          <div className="flex items-center justify-between border-b border-white/20 pb-4">
             <div className="flex items-center gap-3">
               <span className="text-2xl">{activeLang.flag}</span>
               <div>
@@ -121,7 +121,7 @@ export default function AstroLanguages() {
               <MessageSquare className="w-3.5 h-3.5" />
               User Inquiry
             </span>
-            <div className="p-4 sm:p-5 rounded-2xl rounded-tl-sm bg-[#161c38] border border-white/10 text-white text-sm sm:text-base font-semibold leading-relaxed">
+            <div className="p-4 sm:p-5 rounded-2xl rounded-tl-sm bg-[#161c38] border border-white/20 text-white text-sm sm:text-base font-semibold leading-relaxed">
               &ldquo;{activeLang.sampleQuery}&rdquo;
             </div>
           </div>
@@ -138,12 +138,12 @@ export default function AstroLanguages() {
           </div>
 
           {/* Bottom guarantee */}
-          <div className="pt-2 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-300 border-t border-white/10 font-medium">
+          <div className="pt-2 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-200 border-t border-white/20 font-medium">
             <span className="flex items-center gap-1.5 text-emerald-400">
               <Check className="w-4 h-4" />
               Accurate Devanagari & Gujarati Fonts Rendered Crisp
             </span>
-            <span className="text-slate-300">
+            <span className="text-slate-200">
               Switch languages seamlessly mid-chat
             </span>
           </div>

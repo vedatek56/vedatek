@@ -85,7 +85,7 @@ export default function AstroDualEngine() {
   ];
 
   return (
-    <section id="dual-engine" className="relative py-24 border-t border-white/10 bg-[#07080e]">
+    <section id="dual-engine" className="relative py-24 border-t border-white/20 bg-[#080b18]">
       {/* Background Accent Gradients */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
         <div className="absolute top-1/2 left-0 w-96 h-96 bg-indigo-600/20 rounded-full blur-[140px]" />
@@ -112,7 +112,7 @@ export default function AstroDualEngine() {
         {/* Engine Switcher Tabs */}
         <div className="space-y-8">
           <div className="flex justify-center">
-            <div className="p-1.5 rounded-2xl bg-[#11152a] border border-white/15 flex items-center gap-2 shadow-2xl">
+            <div className="p-1.5 rounded-2xl bg-[#11152a] border border-white/25 flex items-center gap-2 shadow-2xl">
               <button
                 type="button"
                 onClick={() => setActiveTab("vedic")}
@@ -120,7 +120,7 @@ export default function AstroDualEngine() {
                 className={`flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-extrabold tracking-wide transition-all ${
                   activeTab === "vedic"
                     ? "bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 shadow-lg shadow-amber-500/30 scale-105"
-                    : "text-slate-300 hover:text-white"
+                    : "text-slate-200 hover:text-white"
                 }`}
               >
                 <Moon className="w-4 h-4" />
@@ -133,7 +133,7 @@ export default function AstroDualEngine() {
                 className={`flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-extrabold tracking-wide transition-all ${
                   activeTab === "western"
                     ? "bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg shadow-indigo-500/30 scale-105"
-                    : "text-slate-300 hover:text-white"
+                    : "text-slate-200 hover:text-white"
                 }`}
               >
                 <Sun className="w-4 h-4" />
@@ -160,7 +160,7 @@ export default function AstroDualEngine() {
                       }`}>
                         <Icon className="w-5 h-5" />
                       </div>
-                      <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#181e3a] border border-white/10 text-slate-300">
+                      <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#181e3a] border border-white/20 text-slate-200">
                         {feature.tag}
                       </span>
                     </div>
@@ -171,7 +171,7 @@ export default function AstroDualEngine() {
                       {feature.description}
                     </p>
                   </div>
-                  <div className="pt-2 flex items-center gap-1.5 text-[11px] text-amber-300 font-semibold border-t border-white/10">
+                  <div className="pt-2 flex items-center gap-1.5 text-[11px] text-amber-300 font-semibold border-t border-white/20">
                     <Check className="w-3.5 h-3.5 text-amber-400" />
                     <span>Real-time Ephemeris Verified</span>
                   </div>
@@ -201,14 +201,14 @@ export default function AstroDualEngine() {
               {/* Matrix List */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
                 {synastryPoints.map((kuta) => (
-                  <div key={kuta.name} className="p-3 rounded-2xl bg-[#161c36] border border-white/10 text-xs space-y-0.5">
+                  <div key={kuta.name} className="p-3 rounded-2xl bg-[#18224b] border border-white/20 text-xs space-y-0.5">
                     <div className="flex items-center justify-between">
                       <span className="font-bold text-white">{kuta.name}</span>
                       <span className="text-[10px] font-extrabold text-rose-300 bg-rose-500/20 px-2 py-0.5 rounded border border-rose-500/30">
                         {kuta.score}
                       </span>
                     </div>
-                    <p className="text-[11px] text-slate-300 leading-tight font-medium">{kuta.desc}</p>
+                    <p className="text-[11px] text-slate-200 leading-tight font-medium">{kuta.desc}</p>
                   </div>
                 ))}
               </div>
@@ -236,33 +236,33 @@ export default function AstroDualEngine() {
 
               {/* Memory Capability Features */}
               <div className="space-y-3 pt-2">
-                <div className="p-3.5 rounded-2xl bg-[#161c36] border border-indigo-500/30 flex items-start gap-3">
+                <div className="p-3.5 rounded-2xl bg-[#18224b] border border-indigo-500/30 flex items-start gap-3">
                   <div className="w-8 h-8 rounded-xl bg-indigo-500/20 flex items-center justify-center shrink-0 mt-0.5">
                     <Brain className="w-4 h-4 text-indigo-300" />
                   </div>
                   <div>
                     <span className="text-xs font-bold text-white block">Career & Goal Continuity</span>
-                    <span className="text-[11px] text-slate-300 font-medium">Remembers your career promotions, business ventures, and interviews across multi-week dasha transits.</span>
+                    <span className="text-[11px] text-slate-200 font-medium">Remembers your career promotions, business ventures, and interviews across multi-week dasha transits.</span>
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-2xl bg-[#161c36] border border-amber-500/30 flex items-start gap-3">
+                <div className="p-3.5 rounded-2xl bg-[#18224b] border border-amber-500/30 flex items-start gap-3">
                   <div className="w-8 h-8 rounded-xl bg-amber-500/20 flex items-center justify-center shrink-0 mt-0.5">
                     <Sparkles className="w-4 h-4 text-amber-400" />
                   </div>
                   <div>
                     <span className="text-xs font-bold text-white block">Emotional & Relationship Context</span>
-                    <span className="text-[11px] text-slate-300 font-medium">Tracks emotional patterns and relationship dynamics discussed in past consultations to offer deeper contextual guidance.</span>
+                    <span className="text-[11px] text-slate-200 font-medium">Tracks emotional patterns and relationship dynamics discussed in past consultations to offer deeper contextual guidance.</span>
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-2xl bg-[#161c36] border border-emerald-500/30 flex items-start gap-3">
+                <div className="p-3.5 rounded-2xl bg-[#18224b] border border-emerald-500/30 flex items-start gap-3">
                   <div className="w-8 h-8 rounded-xl bg-emerald-500/20 flex items-center justify-center shrink-0 mt-0.5">
                     <ShieldCheck className="w-4 h-4 text-emerald-400" />
                   </div>
                   <div>
                     <span className="text-xs font-bold text-white block">Client-Controlled Privacy</span>
-                    <span className="text-[11px] text-slate-300 font-medium">Wipe memory slots, delete specific memories, or purge your entire profile with a single tap at any time.</span>
+                    <span className="text-[11px] text-slate-200 font-medium">Wipe memory slots, delete specific memories, or purge your entire profile with a single tap at any time.</span>
                   </div>
                 </div>
               </div>

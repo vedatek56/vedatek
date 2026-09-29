@@ -18,7 +18,7 @@ export default function AstroPricing() {
       ctaHref: "#download-play",
       popular: false,
       badge: "No Credit Card",
-      buttonClass: "bg-[#161c36] hover:bg-[#1f274a] text-white border border-white/15",
+      buttonClass: "bg-[#18224b] hover:bg-[#1f274a] text-white border border-white/25",
     },
     {
       name: "Monthly Flex",
@@ -36,7 +36,7 @@ export default function AstroPricing() {
       ctaHref: "#download-play",
       popular: false,
       badge: "Flexible",
-      buttonClass: "bg-[#161c36] hover:bg-[#1f274a] text-white border border-white/15",
+      buttonClass: "bg-[#18224b] hover:bg-[#1f274a] text-white border border-white/25",
     },
     {
       name: "Annual Pass",
@@ -79,7 +79,7 @@ export default function AstroPricing() {
   ];
 
   return (
-    <section id="pricing" className="relative py-24 border-t border-white/10 bg-[#07080e]">
+    <section id="pricing" className="relative py-24 border-t border-white/20 bg-[#080b18]">
       {/* Background Ambience */}
       <div className="absolute inset-0 pointer-events-none -z-10">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-amber-500/15 rounded-full blur-[150px]" />
@@ -110,7 +110,7 @@ export default function AstroPricing() {
               className={`rounded-3xl p-7 flex flex-col justify-between space-y-6 transition-all duration-300 relative ${
                 plan.popular
                   ? "bg-[#11162e] border-2 border-amber-400 shadow-2xl shadow-amber-500/20 scale-[1.03] z-10"
-                  : "bg-[#11152a]/90 border border-white/15 hover:border-amber-400/50 shadow-xl shadow-black/50"
+                  : "bg-[#11152a]/90 border border-white/25 hover:border-amber-400/50 shadow-xl shadow-black/50"
               }`}
             >
               {/* Badge */}
@@ -120,7 +120,7 @@ export default function AstroPricing() {
                     className={`text-[11px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full ${
                       plan.popular
                         ? "bg-amber-400 text-slate-950 font-black shadow-md"
-                        : "bg-[#181e38] border border-white/15 text-slate-200"
+                        : "bg-[#181e38] border border-white/25 text-slate-200"
                     }`}
                   >
                     {plan.badge}
@@ -137,18 +137,18 @@ export default function AstroPricing() {
                     <span className="text-4xl font-black text-white tracking-tight">
                       {plan.price}
                     </span>
-                    <span className="text-xs text-slate-300 font-semibold">
+                    <span className="text-xs text-slate-200 font-semibold">
                       /{plan.period}
                     </span>
                   </div>
-                  <p className="text-xs text-slate-300 mt-2 leading-relaxed font-medium">
+                  <p className="text-xs text-slate-200 mt-2 leading-relaxed font-medium">
                     {plan.description}
                   </p>
                 </div>
 
                 {/* Feature List */}
-                <div className="pt-4 border-t border-white/10 space-y-3">
-                  <span className="text-[11px] font-bold uppercase text-slate-300 tracking-wider block">
+                <div className="pt-4 border-t border-white/20 space-y-3">
+                  <span className="text-[11px] font-bold uppercase text-slate-200 tracking-wider block">
                     What&apos;s Included:
                   </span>
                   <ul className="space-y-2.5 text-xs text-slate-100 font-medium">
@@ -177,14 +177,14 @@ export default function AstroPricing() {
         </div>
 
         {/* Guarantee Banner */}
-        <div className="max-w-3xl mx-auto p-6 rounded-3xl bg-[#11162e] border border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-200 text-center sm:text-left shadow-xl">
+        <div className="max-w-3xl mx-auto p-6 rounded-3xl bg-[#11162e] border border-white/25 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-200 text-center sm:text-left shadow-xl">
           <div className="flex items-center gap-3.5">
             <div className="w-10 h-10 rounded-2xl bg-emerald-500/20 flex items-center justify-center shrink-0">
               <ShieldCheck className="w-6 h-6 text-emerald-400" />
             </div>
             <div>
               <span className="font-bold text-white text-sm block">Apple & Google In-App Purchase Protection</span>
-              <span className="text-slate-300 font-normal">Manage or cancel your subscription at any time directly in your App Store or Play Store settings.</span>
+              <span className="text-slate-200 font-normal">Manage or cancel your subscription at any time directly in your App Store or Play Store settings.</span>
             </div>
           </div>
           <span className="shrink-0 px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold">

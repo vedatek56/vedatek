@@ -34,7 +34,7 @@ export default function AstroFaq() {
   ];
 
   return (
-    <section id="faq" className="relative py-24 border-t border-white/10 bg-[#06070d]">
+    <section id="faq" className="relative py-24 border-t border-white/20 bg-[#06070d]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Section Header */}
@@ -59,14 +59,14 @@ export default function AstroFaq() {
             return (
               <div
                 key={faq.question}
-                className="rounded-3xl overflow-hidden border border-white/10 bg-[#11152a] transition-colors shadow-lg"
+                className="rounded-3xl overflow-hidden border border-white/20 bg-[#11152a] transition-colors shadow-lg"
               >
                 <button
                   type="button"
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
                   aria-expanded={isOpen}
                   aria-label={`Toggle answer for: ${faq.question}`}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none hover:bg-[#161c36] transition-colors"
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none hover:bg-[#18224b] transition-colors"
                 >
                   <h3 className="text-sm sm:text-base font-bold text-white flex items-center gap-3">
                     <Sparkles className="w-4 h-4 text-amber-400 shrink-0" />
@@ -79,7 +79,7 @@ export default function AstroFaq() {
                   />
                 </button>
                 {isOpen && (
-                  <div className="px-6 pb-6 text-xs sm:text-sm text-[#e2e8f0] leading-relaxed border-t border-white/10 pt-4 font-normal">
+                  <div className="px-6 pb-6 text-xs sm:text-sm text-[#e2e8f0] leading-relaxed border-t border-white/20 pt-4 font-normal">
                     {faq.answer}
                   </div>
                 )}
