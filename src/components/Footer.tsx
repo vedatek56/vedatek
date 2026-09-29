@@ -8,8 +8,8 @@ export default function Footer() {
   const pathname = usePathname();
   const currentYear = new Date().getFullYear();
 
-  // Hide VedaTek footer on AstroReply pages
-  if (pathname?.startsWith("/astroreply")) {
+  // Hide VedaTek footer on AstroReply and Astrology pages
+  if (pathname?.startsWith("/astroreply") || pathname?.startsWith("/astrology")) {
     return null;
   }
 
